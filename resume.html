@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Resume</title>
+    <meta lang="en" charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ensure proper mobile and desktop bootstrap rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Custum Javascript rules for this site -->
+    <script src="rules.js"></script>
+    <!-- Personal stylesheet -->
+    <link rel="stylesheet" href="dchid.css">
+</head>
+
+<body>
+    <nav class="topnav" id="myTopnav">
+        <!-- Set activ page in navbar to bg-primary's color -->
+        <a href="index.html">Home</a>
+        <a class="active" href="resume.html">Resume</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="adaptiveNavBar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- body of resume-->
+    <div class="container hidden">
+        <!-- Section for work experience -->
+        <h2 class="centered_text">Work Experience</h2>
+        <div class="card-columns">
+            <div class="card bg-secondary resume_entry">
+                <div class="card-header">
+                    <a href="http://thermofisher.com" target="blank" class="resume_heading">Thermo Fisher Scientific</a>
+                    <p>Data Scientist & Business Intelligence Analyst: <br>September 2019 – Present</p>
+                </div>
+                <div class="card-body">
+                    <p>Thermo Fisher is a biotechnology and labratory supply company whoes mission is to enable its
+                        customers to make the world healthier, cleaner, and safer. I currently work in Thermo Fisher's
+                        IT department as a data scientist. Below is an overview of some of my tasks and
+                        responsibilities.
+                    </p>
+                    <ul>
+                        <li>Works on a data science IT team to provide useful data and models for a variety of
+                            departments at Thermo Fisher such as Corporate Finance and Sales operations</li>
+                        <li>preforms data engineering tasks in data lakes and data warehouses</li>
+                        <li>Automates migrations and formatting for big data</li>
+                        <li>Creates visualizations and models using Python and Power BI</li>
+                        <li>Queries relational and non-relational databases for dataset creation</li>
+                        <li>Leverages AWS and python for machine learning</li>
+                        <li>Manages git varies repositories within IT</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card bg-secondary resume_entry">
+                <div class="card-header">
+                    <a href="http://www.square2.com/" target="blank" class="resume_heading">Square 2 Design</a>
+                    <p>Web Developer: <br>June 2019 – August 2019</p>
+                </div>
+                <div class="card-body">
+                    <p>Square 2 is a graphic design and web development firm based in San Francisco.</p>
+                    <ul>
+                        <li>Built dynamic webpages for clients using WordPress and Joomla</li>
+                        <li>Built static webpages using HTML, CSS, and JavaScript</li>
+                        <li>Wrote backend form handling scripts in PHP</li>
+                        <li>Installed necessary software on web servers such as WordPress plugins</li>
+                        <li>Helped maintain security on host server</li>
+                        <li>Researched dynamic web solutions such as location-based HTTP redirects</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card bg-secondary resume_entry">
+                <div class="card-header">
+                    <a href="http://jvs.org" target="blank" class="resume_heading">Jewish Vocational Services</a>
+                    <p>Data Analyst: <br>May 2018 – August 2018</p>
+                </div>
+                <div class="card-body">
+                    <p>JVS is a non profit which helps unemployed people seek careers and long term employment.
+                    </p>
+                    <ul>
+                        <li>Lead pilot project for employment retention among former clients</li>
+                        <li>Collected Data through surveys</li>
+                        <li>Created reports and uploaded data using Salesforce CRM</li>
+                        <li>Made statistial models with R and presented finding to executives at JVS</li>
+                        <li>Wrote documentation for future data collection and modeling process</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Section for skills -->
+
+        <!-- Miscellaneous (honors and awards, grants, intruiging acomplishments) -->
+
+    </div>
+
+    <footer>
+        <div class="footer_icons">
+            <a href="mailto:dchidester@outlook.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/david-chidester/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/david-chidester"><i class="fa fa-github"></i></a>
+            <a href="https://validator.w3.org/">
+                <img style="border:0;width:88px;height:31px" src="https://www.w3.org/Icons/valid-html401-blue"
+                    alt="Valid CSS!" />
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Valid HTML!" />
+            </a>
+        </div>
+        <p class="copyright"><b>&#169; 2019 David Chidester. All rights reserved.</b></p>
+    </footer>
+
+</body>
+
+</html>

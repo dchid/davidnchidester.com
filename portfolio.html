@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio</title>
+    <meta lang="en" charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ensure proper mobile and desktop bootstrap rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Custum Javascript rules for this site -->
+    <script src="rules.js"></script>
+    <!-- Personal stylesheet -->
+    <link rel="stylesheet" href="dchid.css">
+</head>
+
+<body>
+    <nav class="topnav" id="myTopnav">
+        <!-- Set activ page in navbar to bg-primary's color -->
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a class="active" href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="javascript:void(0);" class="icon" onclick="adaptiveNavBar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <div class="container hidden">
+        <ul class="nav nav-tabs">
+            <li><a class="tab" data-toggle="tab" href="#software_tab">Software Engineering</a></li>
+            <!--<li><a class="tab" data-toggle="tab" href="#data_tab">Data Science</a></li>-->
+            <li><a class="tab" data-toggle="tab" href="#security_tab">Cyber Security</a></li>
+            <li><a class="tab" data-toggle="tab" href="#animation_tab">3D Animation</a></li>
+            <!--<li><a class="tab" data-toggle="tab" href="#simulations_tab">Simulations</a></li>-->
+            <!--<li><a class="tab" data-toggle="tab" href="#os_tab">Operating Systems</a></li>-->
+        </ul>
+        <div class="tab-content">
+            <div id="software_tab" class="tab-pane bg-dark">
+                <br>
+                <h3 class="centered_text">Projects</h3>
+                <br>
+                <div class="container">
+                    <div class="card-columns">
+                        <div class="card bg-secondary">
+                            <div class="card-header">
+                                <h4 class="centered_text">Numeral Base Converter</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>The numeral base converter is a command line utility I designed to convert numbers
+                                    between different numeral bases.
+                                    For example, it can convert numerals between binary, decimal, octal, and hexadecimal
+                                    but
+                                    also more unusal bases (like base 3 for example).
+                                    Like Java's Integer.parseInt() method, it will work with any base between 2 and 16
+                                    inclusive. This project started as a lab for my architecture
+                                    and compilers course at Willamette University, but I've modified it as a CLI
+                                    application
+                                    designed to be piped to other CLI apps.
+                                    Check it out on my Github by clicking the image above.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card bg-secondary">
+                            <div class="card-header">
+                                <h4 class="centered_text">Longest Common DNA Subsequence</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    The longest common DNA subsequence started as a project in my algorithms course
+                                    which
+                                    has since been expanded It can find the longest common subsequence between two DNA
+                                    sequences,
+                                    find compliment bases, and convert DNA to Messenger RNA. I've found this project
+                                    particularily
+                                    interesting after I started working in biotech.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div id="data_tab" class="tab-pane bg-dark">
+                <h3 class="centered_text">Data Science</h3>
+            </div>
+            <div id="security_tab" class="tab-pane bg-dark">
+                <h3 class="centered_text"><br>Cyber Security</h3><br>
+                <p>In Fall of 2018, I participated in the NCL (national cyber league) competition
+                    and did my own indipendant study on penetration testing and ethical hacking. Listed bellow are my
+                    scores during the season. I managed to compete in the gold bracket during the regular season, 
+                    which is the top 15% of preformers during the pre-season.</p>
+                <br>
+                <div class="centered" style="overflow-x: auto;">
+                    <h3 class="centered_text">National Cyber League Scores</h3>
+                    <table class="centered" style="margin: 20px;">
+                        <tr>
+                            <th>Competition</th>
+                            <th>Score</th>
+                            <th>Accuracy</th>
+                            <th>Ranking</th>
+                            <th>Bracket</th>
+                        </tr>
+                        <tr>
+                            <td>Fall 2018 Pre Season</td>
+                            <td>1070/1510</td>
+                            <td>43.4</td>
+                            <td>481/4730</td>
+                            <td style="background-color: goldenrod;">Gold</td>
+                        </tr>
+                        <tr>
+                            <td>Fall 2018 Reg. Season</td>
+                            <td>1460/3000</td>
+                            <td>71.8</td>
+                            <td>511/4729</td>
+                            <td>N/A</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="animation_tab" class="tab-pane bg-dark">
+                <p><br>Back in 2016, I was fortunate enough to take a 3D animation class at Willamette University.
+                    There, I learned how to model, light, rig, and animate in Autodesk Maya.
+                    Here, you can see the work I did in that class, learning the basics of 3D animation.
+                </p>
+                <h4 class="centered_text">The Apple</h4>
+                <p><u>The Apple</u> was my final project in my 3D animation class. While several people have told me
+                    that this video is a little dark, in my defence I just animated it;
+                    someone else wrote it. That said, it was a challenging but enjoyable project to work on with three
+                    other classmates, which taught us to animate as a team. Enjoy!</p>
+                <video class="centered_video" controls>
+                    <source src="https://willamette.edu/~dnchidester/video/the_apple.mp4" type="video/mp4">
+                </video>
+                <p>This animation was a collaberative effort with one other student. We've all had annoying roommates at
+                    one
+                    point or another. Sometimes, we all just want them pipe down.
+                </p>
+                <video class="centered_video" controls>
+                    <source src="https://willamette.edu/~dnchidester/video/Roommate.mp4" type="video/mp4">
+                </video>
+                <p>Unlike the two animations above, this one was a solo effort. I wanted to make a really cool looking
+                    sword and
+                    have it slice stuff. There's not a lot more to it than that.
+                </p>
+                <video class="centered_video" controls loop>
+                    <source src="https://willamette.edu/~dnchidester/video/Fruit%20Slice.mp4" type="video/mp4">
+                </video>
+                <p>This lego animation was one of the earliest projects I did in my animation class. Our assignment was
+                    inspired by the famous Pixar animation <u>Luxo Jr.</u>, where students
+                    were to give life and character to inanimate objects. While the folks at Pixar chose a lamp for Luxo
+                    Jr., I chose my favortie toy as a child: Legos! The animation is a loop.</p>
+                <Video class="centered_video" loop autoplay>
+                    <source src="https://willamette.edu/~dnchidester/video/Lego.mp4" type="video/mp4">
+                </Video>
+                <br>
+            </div>
+            <div id="simulations_tab" class="tab-pane bg-dark">
+                <h3>Simulations</h3>
+            </div>
+            <div id="os_tab" class="tab-pane bg-dark">
+                <h3>Operating Systems</h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_icons">
+            <a href="mailto:dchidester@outlook.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/david-chidester/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/david-chidester"><i class="fa fa-github"></i></a>
+            <a href="https://validator.w3.org/">
+                <img style="border:0;width:88px;height:31px" src="https://www.w3.org/Icons/valid-html401-blue"
+                    alt="Valid CSS!" />
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Valid HTML!" />
+            </a>
+        </div>
+        <p class="copyright"><b>&#169; 2019 David Chidester. All rights reserved.</b></p>
+    </footer>
+
+</body>
+
+</html>

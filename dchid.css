@@ -1,0 +1,328 @@
+/*sets background color for page*/
+body {
+  background-color: lightblue;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+ background-color: #343a40;
+ overflow: hidden;
+ margin: .75%;
+ border-radius: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+ float: left;
+ display: block;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 18px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+ background-color: #6c757d;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+ display: none;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.active {
+  background-color: #007bff;
+}
+
+/* fonts for paragraphs */
+p {
+  font-family: arial;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* tables heads*/
+th {
+  background-color: #007bff;
+  border: solid #343a40 5px;
+  padding: 10px;
+}
+
+/* table rows */
+tr {
+  text-align: left;
+}
+
+/* table cells */
+td {
+  background-color: #6c757d;
+  padding: 10px;
+  border: solid #343a40 5px;
+}
+
+/* tables */
+table {
+  font-family: arial;
+  display: block;
+  margin: 20px;
+}
+
+/* to center videos */
+.centered_video {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/* footer on each page*/
+footer {
+  display: block;
+  /* bootstrap dark card color */
+  background-color: #343a40;
+  margin: .75%;
+  border-radius: 10px;
+}
+
+/* icon sizing */
+.footer_icons {
+  font-size: 60px;
+  text-align: center;
+}
+
+/* for icon spacing */
+i {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* icons become transparent on hover */
+i:hover {
+  opacity: .5;
+}
+
+/* settings for math equations */
+math {
+	font-family: Times New Roman;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* for headshot */
+#portrait {
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: auto;
+}
+
+/* for the copyright notice in the page footer */
+.copyright {
+  font-size: small;
+  color: white;
+  margin-right: 20px;
+  text-align: right;
+}
+
+/* To hide elements */
+div.hidden {
+  display: none;
+}
+
+/* any text which needs to be centered */
+.centered_text {
+  text-align: center;
+}
+
+/* for unix terminal style divs */
+div.terminal {
+  background-color: black;
+  font-family: monospace;
+  color: rgb(0,200,0);
+}
+
+/* a single job on resume */
+.resume_entry{
+  color: white;
+  font-family: arial;
+}
+
+/* for heading in a resume card */
+.resume_heading {
+  color: white;
+  font-family: arial;
+  font-size: larger;
+}
+
+/* tab menu asthetics */
+a.tab {
+  color: white;
+  padding: 15px;
+  font-size: medium;
+  font-family: Arial;
+  display: block;
+}
+
+/* defining look and feel of tab menu */
+a.tab:hover{
+  background-color: #6c757d;
+}
+
+ul.nav-tabs {
+  overflow: hidden;
+  background-color: #343a40;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.tab-content {
+  color: white;
+  background-color: #343a40 !important;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.tab-pane {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* for line separtators */
+div.line_seperator {
+  height: 1px;
+  border-bottom: solid 2px darkgrey;
+  margin: 2px;
+}
+
+/* for blinking animation */
+/*===================================================================================================*/
+.blink {
+  -webkit-animation: blink 1.5s linear infinite;
+  -moz-animation: blink 1.5s linear infinite;
+  -ms-animation: blink 1.5s linear infinite;
+  -o-animation: blink .1.5s linear infinite;
+  animation: blink 1.5s linear infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  50.01% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  50.01% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  50.01% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  50.01% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  50.01% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/*===================================================================================================*/
