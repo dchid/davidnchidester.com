@@ -1,2 +1,2 @@
 # davidnchidester.com
-A backup and public repo for my personal resumen website
+This repository is a backup and public repository for my personal resume website. You may use my css stylesheet, js files, php files or any other things I have on my website for free under the GNU public license.
