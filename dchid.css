@@ -61,6 +61,14 @@ body {
   }
 }
 
+/* Media query to adjust anything that needs to be scaled for mobile devices */
+@media screen and (max-width: 600px){
+  video {
+    width: 90%;
+    height: auto;
+  }
+}
+
 .active {
   background-color: #007bff;
 }
@@ -103,6 +111,13 @@ table {
   display: block;
   margin: auto;
   margin-bottom: 20px;
+}
+
+/* generic centering for elements */
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* footer on each page*/
