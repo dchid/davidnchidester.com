@@ -241,6 +241,12 @@ div.line_seperator {
   margin: 2px;
 }
 
+/* blog post iframes are borderless */
+iframe.blog_post {
+  border: none;
+  width: 100%;
+}
+
 /* for blinking animation */
 /*===================================================================================================*/
 .blink {
