@@ -42,10 +42,16 @@ function buildNavBarHTML(){
     htmlString = "";
     pages.forEach(page => {
         active = "";
-        if ($("#pageTitle").text() == page){
+        fileName = "";
+        // setting active page
+        if ($("#pageTitle").text() == page)
             active = "class=\"active\"";
-        }
-        htmlString += "<a " + active + " href=\"" + page.toLowerCase() + ".html\"> " + page + "</a>";
+        // homepage is index.html
+        if (page == "Home")
+            fileName = "index";
+        else
+            fileName = page.toLowerCase();
+        htmlString += "<a " + active + " href=\"" + fileName + ".html\"> " + page + "</a>";
     });
     htmlString += "<a href=\"javascript:void(0);\" class=\"icon\" onclick=\"adaptiveNavBar()\"><i class=\"fa fa-bars\"></i></a>";
     console.log(htmlString);
