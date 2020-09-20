@@ -9,6 +9,8 @@ $(document).ready(function () {
     //Building html string for footer icons
     const footerIconsHTML = buildFooterHTML();
     $("div.footer_icons").append(footerIconsHTML);
+    const navBarHTML = buildNavBarHTML();
+    $("#myTopnav").append(navBarHTML);
     //to control toggling of slidable elements
     $(".toggle_slide_control").click(function(){
         $(".toggle_slide_target").slideToggle("fast");
@@ -32,4 +34,20 @@ function buildFooterHTML(){
     const gitHubIcon = "<a href=\"https://github.com/david-chidester\"><i class=\"fa fa-github\"></i></a>";
     const copyright = "<p class=\"copyright\"><b>&#169; 2019 David Chidester. All rights reserved.</b></p>";
     return mailToIcon + linkedInIcon + gitHubIcon + copyright;
+}
+
+//Saving nav bar html here because it's on every page
+function buildNavBarHTML(){
+    const pages = ["Home", "Resume", "Portfolio", "Blog"];
+    htmlString = "";
+    pages.forEach(page => {
+        active = "";
+        if ($("#pageTitle").text() == page){
+            active = "class=\"active\"";
+        }
+        htmlString += "<a " + active + " href=\"" + page.toLowerCase() + ".html\"> " + page + "</a>";
+    });
+    htmlString += "<a href=\"javascript:void(0);\" class=\"icon\" onclick=\"adaptiveNavBar()\"><i class=\"fa fa-bars\"></i></a>";
+    console.log(htmlString);
+    return htmlString;
 }

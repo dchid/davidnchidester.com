@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Portfolio</title>
+    <!-- pageTitle id added to tell rules.js what page should be active in the navbar -->
+    <title id="pageTitle">Portfolio</title>
     <meta lang="en" charset="UTF-8">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -23,16 +24,7 @@
 </head>
 
 <body>
-    <nav class="topnav" id="myTopnav">
-        <!-- Set activ page in navbar to bg-primary's color -->
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a class="active" href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
-        <a href="javascript:void(0);" class="icon" onclick="adaptiveNavBar()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </nav>
+    <nav class="topnav" id="myTopnav"></nav>
 
     <div class="container hidden">
         <ul class="nav nav-tabs">
