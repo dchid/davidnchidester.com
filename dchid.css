@@ -67,6 +67,14 @@ body {
     width: 90%;
     height: auto;
   }
+  img {
+    width: 80%;
+    height: auto;
+  }
+  iframe.embeded_youtube{
+    width: 80%;
+    height: auto;
+  }
 }
 
 .active {
@@ -186,6 +194,12 @@ div.terminal {
   background-color: black;
   font-family: monospace;
   color: rgb(0,200,0);
+}
+
+/* defines only text in blog */
+.blog_paragraph {
+  margin-left: 0%;
+  font-family: monospace;
 }
 
 /* a single job on resume */
