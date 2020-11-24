@@ -19,20 +19,11 @@ $(document).ready(function () {
 
 //function for controling adaptive nav bar
 function adaptiveNavBar() {
-<<<<<<< HEAD
     var nav = $("#myTopnav");
     if (nav.className === "topnav")
         nav.className += " responsive";
     else
         nav.className = "topnav";
-=======
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
->>>>>>> a7dbd478b347995ca264fc7f29f887a3b7c9ffbd
 }
 
 //Saving footer html here because it's on every page
