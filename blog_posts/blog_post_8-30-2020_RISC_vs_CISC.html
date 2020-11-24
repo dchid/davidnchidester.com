@@ -20,17 +20,24 @@
     <script src="../rules.js"></script>
     <!-- Personal stylesheet -->
     <link rel="stylesheet" href="../dchid.css">
+<<<<<<< HEAD
+=======
     <style>
         body {
             background-color: black;
         }
     </style>
+>>>>>>> a7dbd478b347995ca264fc7f29f887a3b7c9ffbd
 </head>
 
 <body>
     <div class="terminal">
         <div class="start_terminal"></div><span>
+<<<<<<< HEAD
+            <p class="blog_paragraph">One of the most commercially successful and widely utilized hardware architectures, x86 may soon lose
+=======
             One of the most commercially successful and widely utilized hardware architectures, x86 may soon lose
+>>>>>>> a7dbd478b347995ca264fc7f29f887a3b7c9ffbd
             its dominance. Apple has announced that after years of using Intel CPUs in it’s Macintosh computers, it will
             soon be making the switch to ARM. Indeed, this is a big blow to team blue, especially after they’ve already lost
             the gaming console market to AMD, and continue to lose more and more of the PC market to them each year.
@@ -39,6 +46,31 @@
             originally what helped Intel win over Apple’s partnership in the early 2000’s, when they ditched IBM’s power hungry
             Power PC architecture as computing performance began to be measured in FLOPS per watt rather than FLOPS alone.
             However, there is another reason Apple’s move to ARM architecture is interesting: ARM CPUs are RISC
+<<<<<<< HEAD
+            based.</p>
+
+            <p class="blog_paragraph"></p>One of the main appeals of the x86 architecture was compatibility with existing software and hardware.
+            However, as abstract virtual machines and compatibility layers like Apple’s “Rosetta” dynamic binary translator
+            will ease the transition between architectures, there are many other benefits to RISC for personal computing. So what
+            are RISC and CISC and how do they differ?</p>
+
+            <h4>What is a CISC and how does it work?</h4>
+            <p class="blog_paragraph">CISC stands for (Complete Instruction Set Computer) and they aim to bundle in as many operations as possible
+            into a single instruction. This reduces the amount of assembly code which needs
+            to be stored in RAM. Let’s take the example of adding two numbers. Let there be two arbitrary CPU registers,
+            R0, and R1 which contain some floats we want to add together. A line of CISC assembly would look something like
+            this:</p>
+
+            <h6>ADD R0, R1</h6>
+
+            <p class="blog_paragraph"></p>This is only one line of assembly and doesn’t look that much different than a statement in a high level
+            language such as C or Python. If we replace registers with named variables like foo and bar, the same code
+            implemented in C or Java would be the following:</p>
+
+            <h6>foo += bar;</h6>
+
+            <p class="blog_paragraph">As one can imagine, this makes life very easy for any programmer tasked with writing a compiler, as the
+=======
             based.<br>
 
             One of the main appeals of the x86 architecture was compatibility with existing software and hardware.
@@ -62,10 +94,37 @@
             <span><b>foo += bar;</b></span><br><br>
 
             As one can imagine, this makes life very easy for any programmer tasked with writing a compiler, as the
+>>>>>>> a7dbd478b347995ca264fc7f29f887a3b7c9ffbd
             machine code looks remarkably similar to the source code. While it may seem simple and strait forward, the "add"
             instruction is actually doing several different things in sequence. The “add” instruction loads the
             values from RAM into the registers, lets the integrated circuits work their adding magic, and then stores the values
             back into RAM. Saving RAM and making compilers and interpreters do less work certainly are nice benefits
+<<<<<<< HEAD
+            but...</p>
+
+            <h4>What does RISC do?</h4>
+            <p class="blog_paragraph">RISC instructions do not automatically load or store values into main memory, so values can remain in the
+            CPU registers <b>until they are actually ready to be stored in RAM, or overwritten</b>. This can dramatically
+            reduce the number of loads and stores a program needs to do at the assembly level.</p>
+
+            <p class="blog_paragraph">Let’s consider the previous example of adding two floats, and that registers R2 and R3 point to memory
+            addresses that store the floats we’re adding. The assembly will load, then add, then store the values in the
+            following sequence:</p>
+
+                <h6>LOAD R2, R0<br>
+                    LOAD R3, R1<br>
+                    SUM R0, R1<br>
+                    STORE R1, R2</h6>
+
+            <p class="blog_paragraph">While this approach makes it harder for the poor programmer who’s writing a Python interpreter for a RISC
+            based CPU, you’ll notice that load and store operations were separated from the addition. Notice that there is room for doing some
+            additional arithmetic with the two floats while they’re still in the CPU registers (either directly before or
+            directly after the sum). In addition, this eliminates the need for microcode to break down the previous CISC add
+            operation into something more resembling the RISC code above.</p>
+
+            <h4>Does it really matter?</h4>
+            <p class="blog_paragraph">Obviously My explanation of RISC and CISC CPUs was greatly oversimplified, partially to accommodate my relitively
+=======
             but...<br><br>
 
             <b>What does RISC do?</b><br>
@@ -90,6 +149,7 @@
 
             <b>Does it really matter?</b><br>
             Obviously My explanation of RISC and CISC CPUs was greatly oversimplified, partially to accommodate my relitively
+>>>>>>> a7dbd478b347995ca264fc7f29f887a3b7c9ffbd
             limited knowledge on the topic and also so this blog post doesn’t become excessively long. In an age where 16 GB of DDR4 RAM
             is only $60 on Amazon and affordable smartphones have 6 GB of RAM, CISC’s memory saving capabilities seem like a
             pretty useless feature. Also the complexity of 64 bit instructions have blurred the line between RISC and CISC
@@ -98,6 +158,16 @@
             anything, be it Mac Vs Windows, Intel vs AMD, or anything within or outside the world of tech you could possibly
             dream of. While I enjoyed getting to educate myself and readers of my blog about RISC and CISC, Apple’s choice to
             move from x86 to ARM has implications far beyond the scope of this blog post, and I plan on writing more
+<<<<<<< HEAD
+            about ARM vs x86 in the future. For more information on RISC and CISC, you can check out 
+	    <a href=”https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/risccisc/”>this resource
+            from Stanford university’s CS department</a>. Check out the youtube videos bellow on RISC vs CISC and x86
+            vs ARM as well. Time for me to sign off, and see you in the next post!</p>
+            <iframe class="embeded_youtube centered_video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/X4BxUiqWq8E" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe class="embeded_youtube centered_video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/g16wZWKcao4" frameborder="0"
+=======
             about arm vs x86 in the future. For more information on RISC and CISC, you can check out 
 	    <a href=”https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/risccisc/”>this resource
             from Stanford university’s CS department</a>. Check out the youtube videos bellow on RISC vs CISC and x86
@@ -106,6 +176,7 @@
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g16wZWKcao4" frameborder="0"
+>>>>>>> a7dbd478b347995ca264fc7f29f887a3b7c9ffbd
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </span>
