@@ -5,7 +5,9 @@ $(document).ready(function () {
     //fadin effect
     $('div.hidden').fadeIn(1000).removeClass('hidden');
     //Add the asthetic line to terminal sections
-    $("div.start_terminal").append("<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\"<b class=\"blink\">_</b></span>");
+    $("div.start_terminal").append("<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span>");
+    //blinking effect
+    setInterval( ()=> {$(".blink").toggle();}, 600);
     //Building html string for footer icons
     const footerIconsHTML = buildFooterHTML();
     $("div.footer_icons").append(footerIconsHTML);
@@ -56,3 +58,4 @@ function buildNavBarHTML(){
     console.log(htmlString);
     return htmlString;
 }
+
