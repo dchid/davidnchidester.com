@@ -8,7 +8,7 @@ $(document).ready(function () {
     var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span>"
     $("div.start_terminal").append(blogStr);
     //blinking effect
-    setInterval( ()=> {$(".blink").toggle();}, 600);
+    //setInterval( ()=> {$(".blink").toggle();}, 600); // commented temporarily until I figure out how to toggle display hidden instead of display show
     //Building html string for footer icons
     const footerIconsHTML = buildFooterHTML();
     $("div.footer_icons").append(footerIconsHTML);
@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 //function for controling adaptive nav bar
 function adaptiveNavBar() {
-    var nav = $("#myTopnav");
+    var nav = document.getElementById("myTopnav");
     if (nav.className === "topnav")
         nav.className += " responsive";
     else
