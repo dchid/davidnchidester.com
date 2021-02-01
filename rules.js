@@ -5,10 +5,12 @@ $(document).ready(function () {
     //fadin effect
     $('div.hidden').fadeIn(1000).removeClass('hidden');
     //Add the asthetic line to terminal sections
-    var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span>"
+    //Using jquery toggle function to toggle between "_" and " " set to blink class
+    //This in effect does diplay:hidden instead of display:none
+    var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b><a class=\"blink\"> </a></span>"
     $("div.start_terminal").append(blogStr);
     //blinking effect
-    //setInterval( ()=> {$(".blink").toggle();}, 600); // commented temporarily until I figure out how to toggle display hidden instead of display show
+    setInterval( ()=> {$(".blink").toggle();}, 600);
     //Building html string for footer icons
     const footerIconsHTML = buildFooterHTML();
     $("div.footer_icons").append(footerIconsHTML);
