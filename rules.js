@@ -10,7 +10,7 @@ $(document).ready(function () {
     var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b><a class=\"blink\"> </a></span>"
     $("div.start_terminal").append(blogStr);
     //blinking effect
-    setInterval( ()=> {$(".blink").toggle();}, 600);
+    setInterval( ()=> {$(".blink").visibilityToggle();}, 600);
     //Building html string for footer icons
     const footerIconsHTML = buildFooterHTML();
     $("div.footer_icons").append(footerIconsHTML);
@@ -62,3 +62,8 @@ function buildNavBarHTML(){
     return htmlString;
 }
 
+jQuery.fn.visibilityToggle = function() {
+    return this.css('visibility', function(i, visibility) {
+        return (visibility == 'visible') ? 'hidden' : 'visible';
+    });
+};
