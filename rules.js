@@ -62,6 +62,7 @@ function buildNavBarHTML(){
     return htmlString;
 }
 
+//Hides element instead of display none
 jQuery.fn.visibilityToggle = function() {
     return this.css('visibility', function(i, visibility) {
         return (visibility == 'visible') ? 'hidden' : 'visible';
