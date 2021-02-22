@@ -5,8 +5,6 @@ $(document).ready(function () {
     //fadin effect
     $('div.hidden').fadeIn(1000).removeClass('hidden');
     //Add the asthetic line to terminal sections
-    //Using jquery toggle function to toggle between "_" and " " set to blink class
-    //This in effect does diplay:hidden instead of display:none
     var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b><a class=\"blink\"> </a></span>"
     $("div.start_terminal").append(blogStr);
     //blinking effect
@@ -36,7 +34,7 @@ function buildFooterHTML(){
     const mailToIcon = "<a href=\"mailto:davidchidester@protonmail.com\"><i class=\"fa fa-envelope\"></i></a>";
     const linkedInIcon = "<a href=\"https://www.linkedin.com/in/david-chidester/\"><i class=\"fa fa-linkedin\"></i></a>";
     const gitHubIcon = "<a href=\"https://github.com/david-chidester\"><i class=\"fa fa-github\"></i></a>";
-    const copyright = "<p class=\"copyright\"><b>&#169; 2019 David Chidester. All rights reserved.</b></p>";
+    const copyright = "<p class=\"copyright\"><b>&#169; 2019-2021 David Chidester. All rights reserved.</b></p>";
     return mailToIcon + linkedInIcon + gitHubIcon + copyright;
 }
 
