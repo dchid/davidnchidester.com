@@ -34,7 +34,8 @@ function buildFooterHTML(){
     const mailToIcon = "<a href=\"mailto:davidchidester@protonmail.com\"><i class=\"fa fa-envelope\"></i></a>";
     const linkedInIcon = "<a href=\"https://www.linkedin.com/in/david-chidester/\"><i class=\"fa fa-linkedin\"></i></a>";
     const gitHubIcon = "<a href=\"https://github.com/david-chidester\"><i class=\"fa fa-github\"></i></a>";
-    const copyright = "<p class=\"copyright\"><b>&#169; 2019-2021 David Chidester. All rights reserved.</b></p>";
+    var curr = new Date().getFullYear();
+    const copyright = "<p class=\"copyright\"><b>&#169; 2019-"+ curr + " David Chidester. All rights reserved.</b></p>";
     return mailToIcon + linkedInIcon + gitHubIcon + copyright;
 }
 
