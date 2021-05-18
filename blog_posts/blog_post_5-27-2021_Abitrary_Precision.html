@@ -28,7 +28,7 @@
           <p class="blog_paragraph">
             Anyone who knows me well knows how much I love Sacha Baron Cohen. While I was watching an old episode of Da Ali G show, I came across this clip of Ali asking if computers will ever calculate 99999999999... multiplied by 999999... (he goes on saying '9' for about 40 seconds like that stupid avant garde Beatles sound collage <u>Revolution 9</u>).
           </p>
-          <iframe  class="centered_video" width="560" height="315" src="https://www.youtube.com/embed/xx5t5ps-bwc?start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe  class="embeded_youtube centered_video" width="560" height="315" src="https://www.youtube.com/embed/xx5t5ps-bwc?start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <p class="blog_paragraph">
             Despite the fact that this was a joke, three thoughts came to my mind: The first that I should write out a program to time the calculation and see how long it takes my computer to complete. The second was that I hope someone else already transcribed Ali G’s math problem so that I wouldn’t have to waste too much of my time (thankfully someone on <a href="https://www.reddit.com/r/CasualMath/comments/1pnqns/can_we_solve_ali_gs_math_problems/" target="_blank">Reddit</a> has done it). The third question was how am I going to have high enough precision to store those numbers in memory. That last one is the topic of this blog post. One might ask how any 64 bit computer can store a number larger than 2^64 - 1, and the answer is arbitrary precision arithmetic.
           </p>
@@ -54,7 +54,7 @@
           </p>
           <h4>How does it work?</h4>
           <p class="blog_paragraph">
-            As one might expect, the most simple implementations of APA just allocate more memory for higher precision. Bytes are nothing more than an ordered collection of 8 bits. To store larger integers, one need only create a larger collection of bits. Floats are a little bit different, (no pun intended). The IEE defines a double as using 1 bit for sign, 11 bits for the exponent, and 52 bits for the mantissa making 64 bits in total.
+            As one might expect, the most simple implementations of APA just allocate more memory for higher precision. Bytes are nothing more than an ordered collection of 8 bits. To store larger integers, one need only create a larger collection of bits. Floats are a little bit different, (no pun intended). The IEEE defines a double as using 1 bit for sign, 11 bits for the exponent, and 52 bits for the mantissa making 64 bits in total.
           </p>
           <a title="Codekaizen, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:IEEE_754_Double_Floating_Point_Format.svg"><img width="512" alt="IEEE 754 Double Floating Point Format" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/IEEE_754_Double_Floating_Point_Format.svg/512px-IEEE_754_Double_Floating_Point_Format.svg.png" style="background-color: white;" class="centered"></a>
           <p class="blog_paragraph">
