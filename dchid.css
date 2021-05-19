@@ -5,6 +5,7 @@ body {
 
 /* Add a black background color to the top navigation */
 .topnav {
+ background-color: #343a40;
  overflow: hidden;
  margin: .75%;
  border-radius: 10px;
@@ -14,6 +15,7 @@ body {
 .topnav a {
  float: left;
  display: block;
+ color: #f2f2f2;
  text-align: center;
  padding: 14px 16px;
  text-decoration: none;
