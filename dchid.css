@@ -187,6 +187,7 @@ div.terminal {
   background-color: black;
   font-family: monospace;
   color: rgb(0,200,0);
+  margin-bottom: 40px;
 }
 
 /* defines only text in blog */
