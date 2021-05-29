@@ -26,10 +26,10 @@ $(document).ready(function () {
 //function for controling adaptive nav bar
 function adaptiveNavBar() {
     var nav = document.getElementById("myTopnav");
-    if (nav.className === "topnav")
+    if (nav.className === "topnav bg-dark")
         nav.className += " responsive";
     else
-        nav.className = "topnav";
+        nav.className = "topnav bg-dark";
 }
 
 //Saving footer html here because it's on every page
