@@ -15,6 +15,8 @@ $(document).ready(function () {
     const navBarHTML = buildNavBarHTML();
     $("#myTopnav").append(navBarHTML);
     $("#myTopnav").addClass("bg-dark");
+    //add favicon
+    $('<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">').appendTo("head");
     //to control toggling of slidable elements
     $(".toggle_slide_control").click(function(){
         $(".toggle_slide_target").slideToggle("fast");
