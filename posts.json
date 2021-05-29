@@ -1,27 +1,9 @@
 {"posts":
   [
     {
-      "title": "What’s a tiling window manager and why might you use one?",
-      "month": 3, "day": 2, "year": 2020,
-      "path": "blog_posts/blog_post_3-2-2020_tiling_wm.html",
-      "text": true
-    },
-    {
-      "title": "RISC vs CISC architecures?",
-      "month": 8, "day": 30, "year": 2020,
-      "path": "blog_posts/blog_post_8-30-2020_RISC_vs_CISC.html",
-      "text": true
-    },
-    {
-      "title": "The power of arm unleashed!",
-      "month": 11, "day": 15, "year": 2020,
-      "path": "blog_posts/blog_post_8-15-2020_arm_unleashed.html",
-      "text": true
-    },
-    {
-      "title": "Host Your Own Server!",
-      "month": 1, "day": 17, "year": 2021,
-      "path": "blog_posts/blog_post_1-17-2021_Personal_Server.html",
+      "title": "Arbitrary Precision Arithmetic",
+      "month": 5, "day": 17, "year": 2021,
+      "path": "blog_posts/blog_post_5-27-2021_Abitrary_Precision.html",
       "text": true
     },
     {
@@ -31,9 +13,27 @@
       "text": false
     },
     {
-      "title": "Arbitrary Precision Arithmetic",
-      "month": 5, "day": 17, "year": 2021,
-      "path": "blog_posts/blog_post_5-27-2021_Abitrary_Precision.html",
+      "title": "Host Your Own Server!",
+      "month": 1, "day": 17, "year": 2021,
+      "path": "blog_posts/blog_post_1-17-2021_Personal_Server.html",
+      "text": true
+    },
+    {
+      "title": "The power of arm unleashed!",
+      "month": 11, "day": 15, "year": 2020,
+      "path": "blog_posts/blog_post_8-15-2020_arm_unleashed.html",
+      "text": true
+    },
+    {
+      "title": "RISC vs CISC architecures?",
+      "month": 8, "day": 30, "year": 2020,
+      "path": "blog_posts/blog_post_8-30-2020_RISC_vs_CISC.html",
+      "text": true
+    },
+    {
+      "title": "What’s a tiling window manager and why might you use one?",
+      "month": 3, "day": 2, "year": 2020,
+      "path": "blog_posts/blog_post_3-2-2020_tiling_wm.html",
       "text": true
     }
   ]
