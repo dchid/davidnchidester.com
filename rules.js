@@ -5,7 +5,7 @@ $(document).ready(function () {
     //fadin effect
     $('div.hidden').fadeIn(1000).removeClass('hidden');
     //Add the asthetic line to terminal sections
-    var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b><a class=\"blink\"> </a></span>"
+    var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span>"
     $("div.start_terminal").append(blogStr);
     //blinking effect
     setInterval( ()=> {$(".blink").visibilityToggle();}, 600);
