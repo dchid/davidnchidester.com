@@ -14,6 +14,7 @@ $(document).ready(function () {
     $("div.footer_icons").append(footerIconsHTML);
     const navBarHTML = buildNavBarHTML();
     $("#myTopnav").append(navBarHTML);
+    $("#myTopnav").addClass("bg-dark");
     //to control toggling of slidable elements
     $(".toggle_slide_control").click(function(){
         $(".toggle_slide_target").slideToggle("fast");
@@ -45,11 +46,11 @@ function buildNavBarHTML(){
     const pages = ["Home", "Resume", "Portfolio", "Blog"];
     htmlString = "";
     pages.forEach(page => {
-        active = "";
+        active = "class=\"text-light\"";
         fileName = "";
         // setting active page
         if ($("#pageTitle").text() == page)
-            active = "class=\"active\"";
+            active = "class=\"bg-primary text-light\"";
         // homepage is index.html
         if (page == "Home")
             fileName = "index";
