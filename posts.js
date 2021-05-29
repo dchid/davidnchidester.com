@@ -5,8 +5,6 @@ $(document).ready(function () {
 });
 
 function insertBlogPosts(){
-  //insert blog posts
-  function insertBlogPosts(){
     //posts.json temporarily hardcoded
     var posts = [
         {
