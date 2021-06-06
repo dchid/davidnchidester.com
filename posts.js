@@ -10,7 +10,7 @@ function insertBlogPosts(){
         {
           title: "Arbitrary Precision Arithmetic",
           month: 5, day: 17, year: 2021,
-          path: "blog_posts/blog_post_5-27-2021_Abitrary_Precision.html",
+          path: "blog_posts/blog_post_5-27-2021_Arbitrary_Precision.html",
           text: true
         },
         {
