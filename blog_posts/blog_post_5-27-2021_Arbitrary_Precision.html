@@ -50,7 +50,7 @@
             </thead>
           </table>
           <p class="blog_paragraph">
-            We're all set until we add 134+122=128 and get an overflow, looping back to 0. <em>Note: in reality this won’t actually happen in C because as of C11, unsigned operands can never overflow, but let’s pretend that they do.</em> We can solve this problem by switching to a higher precision data type like an integer, but then what happens when that’s not enough? What if even an unsigned long is insufficient? At a low level, that certainly won’t suffice to store the numbers in Ali’s math problem. Will we have to continuously invent larger and larger data types in C? The answer is no, because C and most other languages have libraries for arbitrary precision integers and floats which allow us to use as many bytes as needed to store a number.
+            We're all set until we add 134+122=256 and get an overflow, looping back to 0. <em>Note: in reality this won’t actually happen in C because as of C11, unsigned operands can never overflow, but let’s pretend that they do.</em> We can solve this problem by switching to a higher precision data type like an integer, but then what happens when that’s not enough? What if even an unsigned long is insufficient? At a low level, that certainly won’t suffice to store the numbers in Ali’s math problem. Will we have to continuously invent larger and larger data types in C? The answer is no, because C and most other languages have libraries for arbitrary precision integers and floats which allow us to use as many bytes as needed to store a number.
           </p>
           <h4>How does it work?</h4>
           <p class="blog_paragraph">
