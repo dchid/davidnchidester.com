@@ -8,6 +8,12 @@ function insertBlogPosts(){
     //posts.json temporarily hardcoded
     var posts = [
         {
+          title: "Host your own server: part 2",
+          month: 9, day: 2, year: 2022,
+          path: "blog_posts/blog_post_9-2-2021_Personal_Server_2.html",
+          text: true
+        },
+        {
           title: "Arbitrary Precision Arithmetic",
           month: 5, day: 17, year: 2021,
           path: "blog_posts/blog_post_5-27-2021_Arbitrary_Precision.html",
