@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /blog_posts
-Disallow: /images/AWS_Cert
+Disallow: /images/badges
 Disallow: /posts.json
