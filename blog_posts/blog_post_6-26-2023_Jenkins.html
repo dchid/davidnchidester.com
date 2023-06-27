@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blog</title>
+    <meta lang="en" charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ensure proper mobile and desktop bootstrap rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Custum Javascript rules for this site -->
+    <script src="../rules.js"></script>
+    <!-- Personal stylesheet -->
+    <link rel="stylesheet" href="../dchid.css">
+</head>
+
+<div class="terminal">
+<div class="start_terminal"></div>
+
+<body style="background-color: black;">
+  <p class="blog_paragraph">I was recently speaking with a cyber security professional about
+      DevSecOps at a neworking event. Upon asking if they’ve heard of
+      Jenkins which prompted a response “That lousy butler? We’ve been
+      trying to get people to ditch it for years!”. The remainder of our
+      conversation was consumed by our mutual frustration with Jenkins.
+      I’ve never loathed any piece of software more than Microsoft’s NT
+      Kernel, but a close a very close second would have to be Jenkins,
+      which brings me to the topic of this blog post: ten reasons Jenkins
+      is the worst DevOps automation server ever, and what DevOps engineers
+      should use instead. Least anyone misunderstand, the purpose of this
+      article isn’t to vent my frustrations at Jenkins, but rather to use
+      Jenkins as a case study for everything DevOps engineers shouldn’t
+      do, and thus, provide a counter-example of what a fast, secure, and
+      reliable CI/CD pipeline looks like.</p>
+
+<ul>
+  <li><h4>UI</h4></li>
+</ul>
+<p class="blog_paragraph">
+The UI is the least of Jenkin’s problems, yet it’s impossible not
+to note how it looks like a WebApp from 1999. Asthetics aside,
+Jenkins’ UI is unresponsive, its menus are difficult to navigate
+and it takes 3-4 clicks and page refreshes to actually navigate to
+the content you need. The fact that one of the most popular plugins
+for Jenkins is a complete UI overhaul tells you how archaic the UI
+truly is.</p>
+<br/>
+
+<ul>
+  <li><h4>Scalability</h4></li>
+</ul>
+<p class="blog_paragraph">As software grows and the number of
+CI, CD, and CT pipelines become more numerous, you’d expect a
+DevOps automation server to scale in paralel. Unfortunately Jenkins
+is not up to the task. Running jobs on the master node is extremely
+insecure, and setting up additional worker nodes it not easy, nor is
+scaling down when few deployments are running. You expected Jenkins
+to work with Kubernetes out of the box and provision worker nodes on
+demand? Think again! Simply getting Jenkins to work with docker is
+already a headache.</span></p>
+<br/>
+
+</p>
+<ul>
+  <li><h4>Java WebApp</h4></li>
+</ul>
+<p class="blog_paragraph">
+Java was intended to be a the “write once, run anywhere”
+platform, but in practice it’s more like “write once debug
+everywhere”. Java’s abstract VM/semi-compiled aproach tried to
+solve most of the compatibility issues which are better addressed by
+containerization and virtualization today. The JVM certainly has its
+place, but if December 2021’s log4j vulnerability and Java
+“applets” have taught us anything, it’s that Java isn’t the
+best or most secure platform for developing web apps. Cross platform
+compatibility doesn’t even matter as it’s almost gaurunteed that
+any web app in 2023 is hosted on Linux. I’m astonished that the
+Jenkins development team is even still releasing Windows binaries.</p>
+<br/>
+
+</p>
+<ul>
+	<li><h4>Updates</h4></li>
+</ul>
+<p class="blog_paragraph">
+Jenkins sure isn’t very modern for a web-app which releases a new
+version <b>on a weekly basis!</b>
+Even if you install the LTS release, the updates come every four
+weeks and is still buggy and prone to crashing. I understand that
+security updates are important, but the release cycle really needs to
+be slowed down. Development teams rely on being able to deploy code
+to production on schedule, and should ever have their CD pipelines
+bottlenecked because Jenkins crashed after the most recent update.</p>
+<br/>
+
+<ul>
+  <li><h4>No SaaS Option</h4></li>
+</ul>
+Not all teams have the Sys-Admin resources to manage a secure CI/CD
+pipeline, which is why Software as a Service (or SaaS as it’s more
+commonly known) is an apealing option over self hosting for many
+teams. Jenkins doesn’t offer this. It requires often multiple
+full-time DevOps professionals to manage a Jenkins server for
+multiple teams, and you can only expect more issues as more pipelines
+are created.</p>
+<br/>
+
+</p>
+<ul>
+  <li><h4>Poor Containerization</h4></li>
+</ul>
+<p class="blog_paragraph">
+Jenkins was developed before containerization became the solution toI
+was recently speaking with a cyber security professional about
+DevSecOps at a neworking event. Upon asking if they’ve heard of
+Jenkins which prompted a response “That lousy butler? We’ve been
+trying to get people to ditch it for years!”. The remainder of our
+conversation was consumed by our mutual frustration with Jenkins.
+I’ve never loathed any piece of software more than Microsoft’s NT
+Kernel, but a close a very close second would have to be Jenkins,
+which brings me to the topic of this blog post: ten reasons Jenkins
+is the worst DevOps automation server ever, and what DevOps engineers
+should use instead. Least anyone misunderstand, the purpose of this
+article isn’t to vent my frustrations at Jenkins, but rather to use
+Jenkins as a case study for everything DevOps engineers shouldn’t
+do, and thus, provide a counter-example of what a fast, secure, and
+reliable CI/CD pipeline looks like.</p>
+<br/>
+
+<ul>
+  <li><h4>XML Database</h4></li>
+</ul>
+<p class="blog_paragraph">
+I genuinely have no clue what the Jenkins developers were thinking
+when they thought using XML files for a database was a good idea.
+Someone could hack the Jenkins user database with a simple stream
+editor! Jenkins could have used MySQL, MariaDB, or Postgres as a
+dependency, but no, the Jenkins dev team thought XML was the best
+solution.</p>
+<br>
+
+<ul>
+  <li><h4>Self Service Model</h4></li>
+</ul>
+<p class="blog_paragraph">
+Telling people “no” never feels good, but tough love is necessary
+when there are so many ways an inexperienced user can compromise a
+Jenkins server. Even when users aren’t doing anything wrong, having
+mutiple teams simply creating folders and projects makes finding and
+organizing pipelines a herculean task. Since it lacks so much
+functionality without plugins, users are always inclined to request
+to install dozens of them. System administraters will review requests
+and ask users “do you really need this plugin to deploy your code?”
+and the sad part is that they often do, and often aren’t mindful of
+how many xss vulnerabilities an average Jenkins plugin has, speaking
+of which...</p>
+<br>
+
+<ul>
+  <li><h4>Plugins</h4></li>
+</ul>
+<p class="blog_paragraph">
+Jenkins has an enormous and unregulated plugin ecosystem, which gives
+it functionality it should have without any plugins at all. These
+plugins are not from upstream repositories audited by Jenkins and
+installed by a package manager; it’s a cacophony of features and
+add-ons, half of which aren’t even actively maintained. The more
+plugins installed on a server, the more vulnerable a server is.</p>
+<br>
+
+<ul>
+  <li><h4>System Administration</h4></li>
+</ul>
+<p class="blog_paragraph">
+The worst part of hosting a Jenkins server by far is how much time
+and resources it consumes simply to maintain. If you want to run a
+Jenkins server (which I sincerely hope you don’t, especially after
+reading this article) yoy abolutely need a full time “Jenkins guy”
+to manage it. Any automation which Jenkins provides isn’t worth the
+amount of time and expertise it requires to maintain a Jenkis server.
+Be prepared to work nights and weekends to figure out why a worker
+node keeps crashing, and why logins are broken after installing the
+latest update.</p>
+<br>
+
+<p class="blog_paragraph">
+What qualities should one look for in a DevOps tool? A good DevOps
+tool is everything that Jenkins isn’t. It’s stable, it’s
+scalable, it’s secure, it requires minimal administration, it’s
+supposed to make continous deployment easy! It would be far easier
+and dare I say it, even more secure, to maually copy and paste source
+code from github directly into your production environment then to
+create a Jenkins job to “automate” the process. There are so many
+amazing DevOps automation tools to use instead of Jenkins, that they
+deserve a blog post of their own. Stay tuned my next blog entry for
+an in depth review of all of the excelent options you <b>should</b>
+use for your CI/CD pipelines.</p>
+</div>
+</body>
+
+</html>
