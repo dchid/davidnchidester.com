@@ -34,10 +34,11 @@ trying to get people to ditch it for years!”. The remainder of our
 conversation was consumed by our mutual frustration with Jenkins.
 I’ve never loathed any piece of software more than Microsoft’s NT
 Kernel, but a close a very close second would have to be Jenkins,
-which brings me to the topic of this blog post: ten reasons Jenkins
-is the worst DevOps automation server ever, and what DevOps engineers
-should use instead. Least anyone misunderstand, the purpose of this
-article isn’t to vent my frustrations at Jenkins, but rather to use
+which brings me to the topic of this blog post: ten reasons today's
+DevOps engineers shouldn't use Jenkins and what they should use instead. 
+Lest anyone misunderstand, the purpose of this article isn’t to vent 
+my frustrations at Jenkins, or to deride anyone who uses it and finds
+that it works well for their use case, but rather to use
 Jenkins as a case study for everything DevOps engineers shouldn’t
 do, and thus, provide a counter-example of what a fast, secure, and
 reliable CI/CD pipeline looks like.</p>
@@ -66,7 +67,9 @@ insecure, and setting up additional worker nodes it not easy, nor is
 scaling down when few deployments are running. You expected Jenkins
 to work with Kubernetes out of the box and provision worker nodes on
 demand? Think again! Simply getting Jenkins to work with docker is
-already a headache.</span></p>
+already a headache. Google's repository for kube-jenkins-imager was
+made read only and hasn't been updated since September of 2022, which
+shows that the code base isn't being actively maintained.</p>
 <br/>
 
 <h4>Java WebApp</h4>
@@ -117,7 +120,7 @@ are created.</p>
 <h4>Poor Containerization</h4>
 
 <p class="blog_paragraph">
-Jenkins was developed before containerization became the solution to 
+Jenkins was developed before Docker became the solution to 
 resolving dependency issues. The poor support for Docker makes Jenkins 
 even more difficult to scale, and even less secure. Someone once 
 suggested to me that individual teams should run their own Jenkins 
@@ -151,7 +154,7 @@ functionality without plugins, users are always inclined to request
 to install dozens of them. System administrators will review requests
 and ask users “do you really need this plugin to deploy your code?”
 and the sad part is that they often do, and often aren’t mindful of
-how many xss vulnerabilities an average Jenkins plugin has, speaking
+how many XSS vulnerabilities an average Jenkins plugin has, speaking
 of which...</p>
 <br>
 
@@ -185,7 +188,7 @@ latest update.</p>
 <p class="blog_paragraph">
 What qualities should one look for in a DevOps tool? A good DevOps
 tool is everything that Jenkins isn’t. It’s stable, it’s
-scalable, it’s secure, it requires minimal administration, it’s
+scalable, it’s secure, it requires minimal administration, and it’s
 supposed to make continuous deployment easy! It would be far easier
 and dare I say it, even more secure, to manually copy and paste source
 code from github directly into your production environment then to
