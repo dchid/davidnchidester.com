@@ -26,24 +26,25 @@
 <div class="start_terminal"></div>
 
 <body style="background-color: black;">
-  <p class="blog_paragraph">I was recently speaking with a cyber security professional about
-      DevSecOps at a neworking event. Upon asking if they’ve heard of
-      Jenkins which prompted a response “That lousy butler? We’ve been
-      trying to get people to ditch it for years!”. The remainder of our
-      conversation was consumed by our mutual frustration with Jenkins.
-      I’ve never loathed any piece of software more than Microsoft’s NT
-      Kernel, but a close a very close second would have to be Jenkins,
-      which brings me to the topic of this blog post: ten reasons Jenkins
-      is the worst DevOps automation server ever, and what DevOps engineers
-      should use instead. Least anyone misunderstand, the purpose of this
-      article isn’t to vent my frustrations at Jenkins, but rather to use
-      Jenkins as a case study for everything DevOps engineers shouldn’t
-      do, and thus, provide a counter-example of what a fast, secure, and
-      reliable CI/CD pipeline looks like.</p>
+<p class="blog_paragraph">
+I was recently speaking with a cyber security professional about
+DevSecOps at a neworking event. Upon asking if they’ve heard of
+Jenkins which prompted a response “That lousy butler? We’ve been
+trying to get people to ditch it for years!”. The remainder of our
+conversation was consumed by our mutual frustration with Jenkins.
+I’ve never loathed any piece of software more than Microsoft’s NT
+Kernel, but a close a very close second would have to be Jenkins,
+which brings me to the topic of this blog post: ten reasons Jenkins
+is the worst DevOps automation server ever, and what DevOps engineers
+should use instead. Least anyone misunderstand, the purpose of this
+article isn’t to vent my frustrations at Jenkins, but rather to use
+Jenkins as a case study for everything DevOps engineers shouldn’t
+do, and thus, provide a counter-example of what a fast, secure, and
+reliable CI/CD pipeline looks like.</p>
 
-<ul>
-  <li><h4>UI</h4></li>
-</ul>
+
+<h4>UI</h4>
+
 <p class="blog_paragraph">
 The UI is the least of Jenkin’s problems, yet it’s impossible not
 to note how it looks like a WebApp from 1999. Asthetics aside,
@@ -54,9 +55,9 @@ for Jenkins is a complete UI overhaul tells you how archaic the UI
 truly is.</p>
 <br/>
 
-<ul>
-  <li><h4>Scalability</h4></li>
-</ul>
+
+<h4>Scalability</h4>
+
 <p class="blog_paragraph">As software grows and the number of
 CI, CD, and CT pipelines become more numerous, you’d expect a
 DevOps automation server to scale in parallel. Unfortunately Jenkins
@@ -68,10 +69,8 @@ demand? Think again! Simply getting Jenkins to work with docker is
 already a headache.</span></p>
 <br/>
 
-</p>
-<ul>
-  <li><h4>Java WebApp</h4></li>
-</ul>
+<h4>Java WebApp</h4>
+
 <p class="blog_paragraph">
 Java was intended to be the “write once, run anywhere”
 platform, but in practice it’s more like “write once debug
@@ -87,9 +86,9 @@ Jenkins development team is even still releasing Windows binaries.</p>
 <br/>
 
 </p>
-<ul>
-	<li><h4>Updates</h4></li>
-</ul>
+
+<h4>Updates</h4>
+
 <p class="blog_paragraph">
 Jenkins sure isn’t very modern for a web-app which releases a new
 version <b>on a weekly basis!</b>
@@ -101,9 +100,9 @@ to production on schedule, and should ever have their CD pipelines
 bottlenecked because Jenkins crashed after the most recent update.</p>
 <br/>
 
-<ul>
-  <li><h4>No SaaS Option</h4></li>
-</ul>
+
+<h4>No SaaS Option</h4>
+
 Not all teams have the Sys-Admin resources to manage a secure CI/CD
 pipeline, which is why Software as a Service (or SaaS as it’s more
 commonly known) is an appealing option over self hosting for many
@@ -114,9 +113,9 @@ are created.</p>
 <br/>
 
 </p>
-<ul>
-  <li><h4>Poor Containerization</h4></li>
-</ul>
+
+<h4>Poor Containerization</h4>
+
 <p class="blog_paragraph">
 Jenkins was developed before containerization became the solution to 
 resolving dependency issues. The poor support for Docker makes Jenkins 
@@ -127,9 +126,9 @@ but that creates an immense amount of overhead.
 </p>
 <br/>
 
-<ul>
-  <li><h4>XML Database</h4></li>
-</ul>
+
+<h4>XML Database</h4>
+
 <p class="blog_paragraph">
 I genuinely have no clue what the Jenkins developers were thinking
 when they thought using XML files for a database was a good idea.
@@ -139,9 +138,9 @@ dependency, but no, the Jenkins dev team thought XML was the best
 solution.</p>
 <br>
 
-<ul>
-  <li><h4>Self Service Model</h4></li>
-</ul>
+
+<h4>Self Service Model</h4>
+
 <p class="blog_paragraph">
 Telling people “no” never feels good, but tough love is necessary
 when there are so many ways an inexperienced user can compromise a
@@ -156,9 +155,9 @@ how many xss vulnerabilities an average Jenkins plugin has, speaking
 of which...</p>
 <br>
 
-<ul>
-  <li><h4>Plugins</h4></li>
-</ul>
+
+<h4>Plugins</h4>
+
 <p class="blog_paragraph">
 Jenkins has an enormous and unregulated plugin ecosystem, which gives
 it functionality it should have without any plugins at all. These
@@ -168,9 +167,9 @@ add-ons, half of which aren’t even actively maintained. The more
 plugins installed on a server, the more vulnerable a server is.</p>
 <br>
 
-<ul>
-  <li><h4>System Administration</h4></li>
-</ul>
+
+<h4>System Administration</h4>
+
 <p class="blog_paragraph">
 The worst part of hosting a Jenkins server by far is how much time
 and resources it consumes simply to maintain. If you want to run a

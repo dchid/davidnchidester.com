@@ -7,6 +7,12 @@ $(document).ready(function () {
 function insertBlogPosts(){
     //posts.json temporarily hardcoded
     var posts = [
+	{
+	  title: "Why Jenkins isn't the right tool",
+	  month: 6, day: 27, year: 2022,
+	  path: "blog_posts/blog_post_6-27-2023_Jenkins.html",
+	  text: true
+	},
         {
           title: "Host your own server: part 2",
           month: 9, day: 2, year: 2022,
