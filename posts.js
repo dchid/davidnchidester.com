@@ -9,7 +9,7 @@ function insertBlogPosts(){
     var posts = [
 	{
 	  title: "Why Jenkins isn't the right tool",
-	  month: 6, day: 27, year: 2022,
+	  month: 6, day: 27, year: 2023,
 	  path: "blog_posts/blog_post_6-27-2023_Jenkins.html",
 	  text: true
 	},
