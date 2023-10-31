@@ -21,6 +21,8 @@ $(document).ready(function () {
     $(".toggle_slide_control").click(function(){
         $(".toggle_slide_target").slideToggle("fast");
     });
+    //Activate first tab on load
+    $('.nav-tabs li:first-child a').tab('show');
 });
 
 //function for controling adaptive nav bar
