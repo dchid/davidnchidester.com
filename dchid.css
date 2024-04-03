@@ -114,6 +114,11 @@ table {
   margin-bottom: 20px;
 }
 
+/* Center text such as paragraphs and headings */
+.centered-text {
+  text-align: center;
+}
+
 /* generic centering for elements */
 .centered {
   display: block;
