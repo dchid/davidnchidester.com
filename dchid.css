@@ -114,8 +114,8 @@ table {
   margin-bottom: 20px;
 }
 
-/* Center text such as paragraphs and headings */
-.centered-text {
+/* any text which needs to be centered */
+.centered_text {
   text-align: center;
 }
 
@@ -180,11 +180,6 @@ math {
 /* To hide elements */
 div.hidden {
   display: none;
-}
-
-/* any text which needs to be centered */
-.centered_text {
-  text-align: center;
 }
 
 /* for unix terminal style divs */
