@@ -131,9 +131,8 @@ footer {
   display: block;
   /* bootstrap dark card color */
   background-color: #343a40;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+  margin: .75%;
+  border-radius: 10px;
 }
 
 /* icon sizing */
