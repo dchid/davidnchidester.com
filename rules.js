@@ -5,7 +5,7 @@ $(document).ready(function () {
     //fadin effect
     $('div.hidden').fadeIn(1000).removeClass('hidden');
     //Add the asthetic line to terminal sections
-    var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span>"
+    const blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span>"
     $("div.start_terminal").append(blogStr);
     //blinking effect
     setInterval( ()=> {$(".blink").visibilityToggle();}, 600);
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 //function for controling adaptive nav bar
 function adaptiveNavBar() {
-    var nav = document.getElementById("myTopnav");
+    const nav = document.getElementById("myTopnav");
     if (nav.className === "topnav bg-dark")
         nav.className += " responsive";
     else
@@ -40,7 +40,7 @@ function buildFooterHTML(){
     const linkedInIcon = "<a href=\"https://www.linkedin.com/in/david-chidester/\" target=\"blank\"><i class=\"fa fa-linkedin\"></i></a>";
     const gitHubIcon = "<a href=\"https://github.com/dchid\" target=\"blank\"><i class=\"fa fa-github\"></i></a>";
     const instagramIcon = "<a href=\"https://www.instagram.com/fude_dude/\" target=\"blank\"><i class=\"fa fa-instagram\"></i></a>";
-    var curr = new Date().getFullYear();
+    const curr = new Date().getFullYear();
     const copyright = "<p class=\"copyright\"><b>&#169; 2019-"+ curr + " David Chidester. All rights reserved.</b></p>";
     return mailToIcon + linkedInIcon + gitHubIcon + instagramIcon + copyright;
 }
