@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blog</title>
+    <meta lang="en" charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ensure proper mobile and desktop bootstrap rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Custum Javascript rules for this site -->
+    <script src="../rules.js"></script>
+    <!-- Personal stylesheet -->
+    <link rel="stylesheet" href="../dchid.css">
+</head>
+
+<body style="background-color: black;">
+    <div class="terminal">
+        <div class="start_terminal"></div>
+        <p class="blog_paragraph">
+            It has been a very long time since I posted to this blog, but not because I haven’t been working on
+            interesting projects. Many readers of my blog have been aware of my work at the Museum of Art and Digital
+            Entertainment (MADE) in video game preservation. Over these past few months, I’ve completed what has been my
+            most complex and technically involved project to date; the PS-Placeable exhibit, a Sony PlayStation Portable
+            turned into a console, with 118 games loaded onto it. I’d like to share not only how I created this exhibit,
+            but why it’s important in the first place.
+        </p>
+        <p class="blog_paragraph">
+            In 2019 I had the privilege of attending the Game Developers Conference (GDC) in San Francisco as a student,
+            where Video Game History Foundation founder, Frank Cifaldi, gave his 
+            <a href="https://gdcvault.com/play/1025782/It-s-Still-Emulation-Saving" target="blank">second presentation</a> 
+            at GDC on emulation as a tool for game preservation as a follow up to his
+            <a href="https://www.gdcvault.com/play/1023470/-It-s-Just-Emulation" target="blank">first presentation in 2016</a>.
+            To summarize what Frank said, emulation is simply a piece of software that makes one computer behave like a
+            different computer, and the gaming industry should use it as a tool to keep games in print indefinitely, 
+            just like how you can still watch a nearly 90 year old film like The Wizard of Oz today, without getting a 
+            70mm film print and century old film projector.
+        </p>
+        <p class="blog_paragraph">
+            However, emulation alone isn’t sufficient. Even though you can watch The Wizard of Oz online, the original
+            films should still be archived and preserved, and likewise, there should be the video game equivalent of a
+            film archive; a place where you can experience old games exactly as they were played on their original
+            hardware. Thankfully, there is such a place.
+        </p class="blog_paragraph">
+        <p>
+            I’ve been volunteering with the Museum of Art and Digital Entertainment (MADE) to digitize their collection
+            and get more games in their collection on public exhibition. The MADE didn’t have any PlayStation Portable
+            (PSP) games on display, so I worked on digitizing the MADE’s PSP collection, and putting them on a PSP
+            that’s been converted from handheld to a console.
+        </p>
+        <p class="blog_paragraph">
+            The first step was to rip the files off of PSP discs, and put them on a memory card. PSP games came on
+            proprietary Universal Media Discs (UMD), so I couldn’t just use any old CD drive to copy the data from the
+            discs. Instead I had to modify the firmware on a PSP to turn the PSP itself into a disc ripping tool. Once
+            this was done, I put a barcode on each disc so I could match each game ROM with the disc it was copied from.
+            Finally, I plugged the firmware modified PSP into a computer via USB to copy the files off each disc. It
+            took several weeks, but I managed to digitize 118 PSP games in the MADE’s collection, and put them on a
+            memory card.
+        </p>
+        <p class="blog_paragraph">
+            With the software solution complete, I moved onto the hardware. A project called the PS-Placeable allows
+            PSPs to be turned into a home console. I bought the necessary materials for the build and got to work. The
+            PSP had video output, but no bluetooth to connect a controller. To mitigate this, I flashed bluetooth
+            firmware on a circuit board and soldered it to the PSP’s motherboard. This allowed the PSP to accept input
+            from a controller. I tidied everything up by putting it into a 3D printed case that resembles a PS2. With
+            everything complete, I loaded the games onto the PS-Placeable, and hooked it up to a display.
+        </p>
+
+        <img src="../images/blog/PS-Placeable-build.webp" width="50%" height="auto" alt="building the PS-Placeable" class="centered">
+        <br>
+
+        <p class="blog_paragraph">
+            This project was a lot of work, but the end result was more than worthwhile. No one should need to spend
+            hundreds or even thousands of dollars on vintage games and hardware to experience games from previous
+            decades, and we can’t just let them fade into obscurity. Video games are a unique artistic medium combining
+            other art forms such as visual art, music and storytelling, to turn them into an interactive experience. Old
+            games should be preserved not only to indulge nostalgia, but for the sake of historical preservation, to
+            enable future generations to experience them. If you ever are in downtown Oakland CA, I strongly recommend
+            visiting the MADE. They’re one of the only museums in the world preserving games through playable
+            exhibitions.
+        </p>
+
+        <img src="../images/blog/PS-Placeable.webp" width="50%" height="auto" alt="finished PS-Placeable build" class="centered"></img>
+        <br>
+
+        <p class="blog_paragraph">
+            Thank you to Dan and Stephen from RetroModWorks for creating the PS-Placeable project, thank you to Nate
+            Ferrell for printing the case and helping with the build, and thank you to Kilian Fitzgerald for donating
+            the PSP which I used for this project.
+        </p>
+    </div>
+</body>
+
+</html>
