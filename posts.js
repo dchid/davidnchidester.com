@@ -6,7 +6,13 @@ $(document).ready(function () {
 
 function insertBlogPosts() {
   //posts.json temporarily hardcoded
-  var posts = [
+  const posts = [
+    {
+      title: "Preserving Gaming History With The PS-Placable",
+      month: 3, day: 2, year: 2025,
+      path: "blog_posts/blog_post_3-2-2025_Game_Preservation.html",
+      text: true
+    },
     {
       title: "Why Jenkins isn't the right tool",
       month: 6, day: 27, year: 2023,
