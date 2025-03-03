@@ -1,81 +1,48 @@
+class BlogPost {
+  constructor(title, month, day, year, fname, isText) {
+    this.title = title;
+    this.day = day;
+    this.month = month;
+    this.year = year;
+    this.fname = `blog_post_${[month, day, year].join("-")}_${fname}.html`;
+    this.isText = isText;
+  }
+}
+
+//posts.json temporarily hardcoded
+const posts = [
+  new BlogPost("Preserving Gaming History With The PS-Placable", 3, 2, 2025, "Game_Preservation", true),
+  new BlogPost("Why Jenkins isn't the right tool", 6, 27, 2023, "Jenkins", true),
+  new BlogPost("Host your own server: part 2", 9, 2, 2022, "Personal_Server_2", true),
+  new BlogPost("Arbitrary Precision Arithmetic", 5, 27, 2021, "Arbitrary_Precision", true),
+  new BlogPost("Interview with former Intel and NeXT executive Susan Rockrise", 2, 13, 2021, "Susan_Rockrise", false),
+  new BlogPost("Host Your Own Server!", 1, 17, 2021, "Personal_Server", true),
+  new BlogPost("The power of arm unleashed!", 11, 15, 2020, "arm_unleashed", true),
+  new BlogPost("RISC vs CISC architecures?", 8, 30, 2020, "RISC_vs_CISC", true),
+  new BlogPost("What’s a tiling window manager and why might you use one?", 3, 2, 2020, "tiling_wm", true)
+];
+
 $(document).ready(function () {
   //include blog posts
-  const blogHTML = insertBlogPosts();
+  const blogHTML = insertBlogPosts(posts);
   $("#blogContent").append(blogHTML);
 });
 
-function insertBlogPosts() {
-  //posts.json temporarily hardcoded
-  const posts = [
-    {
-      title: "Preserving Gaming History With The PS-Placable",
-      month: 3, day: 2, year: 2025,
-      path: "blog_posts/blog_post_3-2-2025_Game_Preservation.html",
-      text: true
-    },
-    {
-      title: "Why Jenkins isn't the right tool",
-      month: 6, day: 27, year: 2023,
-      path: "blog_posts/blog_post_6-27-2023_Jenkins.html",
-      text: true
-    },
-    {
-      title: "Host your own server: part 2",
-      month: 9, day: 2, year: 2022,
-      path: "blog_posts/blog_post_9-2-2021_Personal_Server_2.html",
-      text: true
-    },
-    {
-      title: "Arbitrary Precision Arithmetic",
-      month: 5, day: 17, year: 2021,
-      path: "blog_posts/blog_post_5-27-2021_Arbitrary_Precision.html",
-      text: true
-    },
-    {
-      title: "Tea Talk with former Intel and NeXT executive Susan Rockrise",
-      month: 2, day: 13, year: 2021,
-      path: "blog_posts/blog_post_2-13-2021_Susan_Rockrise.html",
-      text: false
-    },
-    {
-      title: "Host Your Own Server!",
-      month: 1, day: 17, year: 2021,
-      path: "blog_posts/blog_post_1-17-2021_Personal_Server.html",
-      text: true
-    },
-    {
-      title: "The power of arm unleashed!",
-      month: 11, day: 15, year: 2020,
-      path: "blog_posts/blog_post_8-15-2020_arm_unleashed.html",
-      text: true
-    },
-    {
-      title: "RISC vs CISC architecures?",
-      month: 8, day: 30, year: 2020,
-      path: "blog_posts/blog_post_8-30-2020_RISC_vs_CISC.html",
-      text: true
-    },
-    {
-      title: "What’s a tiling window manager and why might you use one?",
-      month: 3, day: 2, year: 2020,
-      path: "blog_posts/blog_post_3-2-2020_tiling_wm.html",
-      text: true
-    }
-  ];
+function insertBlogPosts(posts) {
   var htmlString = "";
   for (var i = 0; i < posts.length; i++) {
     //date of blog post
-    var date = posts[i].month + '/' + posts[i].day + '/' + posts[i].year;
-    var postHTML = "<div id=\"bp" + date + "\">";
-    postHTML += "<h3>" + posts[i].title + "</h3>";
-    postHTML += "<span>" + date + "</span>";
+    const date = [posts[i].month, posts[i].day, posts[i].year].join("/");
+    var postHTML = `<div id="bp${date}">`;
+    postHTML += `<h3>"${posts[i].title}"</h3>`;
+    postHTML += `<span>"${date}"</span>`;
     // audio posts have height set to auto
-    var height = posts[i].text ? height = " height=\"1250px\"" : " height=\"auto\"";
-    postHTML += "<div class=\"row terminal\"> \
-                          <div class=\"col-lg-12\"> \
-                            <iframe class=\"blog_post\" src=" + posts[i].path + height + "></iframe> \
-                          </div> \
-                     </div></div>";
+    const height = posts[i].isText ? "1250px" : "auto";
+    postHTML += `<div class="row terminal">
+                          <div class="col-lg-12">
+                            <iframe class="blog_post" src="blog_posts/${posts[i].fname}" height="${height}"></iframe>
+                          </div>
+                     </div></div>`;
     htmlString += postHTML;
   }
   return htmlString;
