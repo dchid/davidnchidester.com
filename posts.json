@@ -1,0 +1,76 @@
+{
+    "posts": [
+        {
+            "title": "Preserving Gaming History With The PS-Placeable", 
+            "month": 3,
+            "day": 2,
+            "year": 2025,
+            "fname": "Game_Preservation",
+            "isText": true
+        },
+        {
+            "title": "Why Jenkins isn't the right tool",
+            "month": 6,
+            "day": 27,
+            "year": 2023,
+            "fname": "Jenkins",
+            "isText": true
+        },
+        {
+            "title": "Host your own server: part 2",
+            "month": 9,
+            "day": 2,
+            "year": 2022,
+            "fname": "Personal_Server_2",
+            "isText": true
+        },
+        {
+            "title": "Arbitrary Precision Arithmetic",
+            "month": 5,
+            "day": 27,
+            "year": 2021,
+            "fname": "Arbitrary_Precision",
+            "isText": true
+        },
+        {
+            "title": "Tea Talk with former Intel and NeXT executive Susan Rockrise",
+            "month": 2,
+            "day": 13,
+            "year": 2021,
+            "fname": "Susan_Rockrise",
+            "isText": false
+        },
+        {
+            "title": "Host Your Own Server!",
+            "month": 1,
+            "day": 17,
+            "year": 2021,
+            "fname": "Personal_Server",
+            "isText": true
+        },
+        {
+            "title": "The power of arm unleashed!",
+            "month": 11,
+            "day": 15,
+            "year": 2020,
+            "fname": "arm_unleashed",
+            "isText": true
+        },
+        {
+            "title": "RISC vs CISC architecures?",
+            "month": 8,
+            "day": 30,
+            "year": 2020,
+            "fname": "RISC_vs_CISC",
+            "isText": true
+        },
+        {
+            "title": "What’s a tiling window manager and why might you use one?",
+            "month": 3,
+            "day": 2,
+            "year": 2020,
+            "fname": "tiling_wm",
+            "isText": true
+        }
+    ]
+}

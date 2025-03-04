@@ -5,7 +5,7 @@ $(document).ready(function () {
     //fadin effect
     $('div.hidden').fadeIn(1000).removeClass('hidden');
     //Add the asthetic line to terminal sections
-    var blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span>"
+    const blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span><br><br>"
     $("div.start_terminal").append(blogStr);
     //blinking effect
     setInterval( ()=> {$(".blink").visibilityToggle();}, 600);
@@ -27,11 +27,9 @@ $(document).ready(function () {
 
 //function for controling adaptive nav bar
 function adaptiveNavBar() {
-    var nav = document.getElementById("myTopnav");
+    const nav = document.getElementById("myTopnav");
     if (nav.className === "topnav bg-dark")
         nav.className += " responsive";
-    else
-        nav.className = "topnav bg-dark";
 }
 
 //Saving footer html here because it's on every page
@@ -40,7 +38,7 @@ function buildFooterHTML(){
     const linkedInIcon = "<a href=\"https://www.linkedin.com/in/david-chidester/\" target=\"blank\"><i class=\"fa fa-linkedin\"></i></a>";
     const gitHubIcon = "<a href=\"https://github.com/dchid\" target=\"blank\"><i class=\"fa fa-github\"></i></a>";
     const instagramIcon = "<a href=\"https://www.instagram.com/fude_dude/\" target=\"blank\"><i class=\"fa fa-instagram\"></i></a>";
-    var curr = new Date().getFullYear();
+    const curr = new Date().getFullYear();
     const copyright = "<p class=\"copyright\"><b>&#169; 2019-"+ curr + " David Chidester. All rights reserved.</b></p>";
     return mailToIcon + linkedInIcon + gitHubIcon + instagramIcon + copyright;
 }
@@ -48,21 +46,15 @@ function buildFooterHTML(){
 //Saving nav bar html here because it's on every page
 function buildNavBarHTML(){
     const pages = ["Home", "Resume", "Portfolio", "Blog"];
-    htmlString = "";
+    let htmlString = "";
     pages.forEach(page => {
-        active = "class=\"text-light\"";
-        fileName = "";
-        // setting active page
-        if ($("#pageTitle").text() == page)
-            active = "class=\"bg-primary text-light\"";
         // homepage is index.html
-        if (page == "Home")
-            fileName = "index";
-        else
-            fileName = page.toLowerCase();
-        htmlString += "<a " + active + " href=\"" + fileName + ".html\"> " + page + "</a>";
+        const fileName = page === "Home" ? "index" : page.toLowerCase();
+        // setting active page
+        const active = $("#pageTitle").text() === page ? "bg-primary text-light" : "text-light";
+        htmlString += `<a class="${active}" href="${fileName}.html">${page}</a>`;
     });
-    htmlString += "<a href=\"javascript:void(0);\" class=\"icon\" onclick=\"adaptiveNavBar()\"><i class=\"fa fa-bars\"></i></a>";
+    htmlString += `<a href="javascript:void(0);" class="icon" onclick="adaptiveNavBar()"><i class="fa fa-bars"></i></a>`;
     return htmlString;
 }
 

@@ -114,6 +114,11 @@ table {
   margin-bottom: 20px;
 }
 
+/* any text which needs to be centered */
+.centered_text {
+  text-align: center;
+}
+
 /* generic centering for elements */
 .centered {
   display: block;
@@ -160,7 +165,7 @@ math {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 100%;
   height: auto;
 }
 
@@ -175,11 +180,6 @@ math {
 /* To hide elements */
 div.hidden {
   display: none;
-}
-
-/* any text which needs to be centered */
-.centered_text {
-  text-align: center;
 }
 
 /* for unix terminal style divs */
