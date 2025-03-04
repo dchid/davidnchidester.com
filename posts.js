@@ -7,9 +7,22 @@ class BlogPost {
     this.fname = `blog_post_${[month, day, year].join("-")}_${fname}.html`;
     this.isText = isText;
   }
+
+  getDate() {
+    return [this.month, this.day, this.year].join("/")
+  }
 }
 
-//posts.json temporarily hardcoded
+async function getPosts() {
+  const rawData = await fetch("posts.json");
+  const data = await rawData.json();
+  let postList = []
+  data.posts.forEach(post => {
+    postList.append(new BlogPost(post.title, post.month, post.year, post.fname, post.isText));
+  });
+  return postList;
+}
+
 const posts = [
   new BlogPost("Preserving Gaming History With The PS-Placable", 3, 2, 2025, "Game_Preservation", true),
   new BlogPost("Why Jenkins isn't the right tool", 6, 27, 2023, "Jenkins", true),
@@ -23,27 +36,26 @@ const posts = [
 ];
 
 $(document).ready(function () {
-  //include blog posts
   const blogHTML = insertBlogPosts(posts);
   $("#blogContent").append(blogHTML);
 });
 
 function insertBlogPosts(posts) {
-  var htmlString = "";
-  for (var i = 0; i < posts.length; i++) {
-    //date of blog post
-    const date = [posts[i].month, posts[i].day, posts[i].year].join("/");
-    var postHTML = `<div id="bp${date}">`;
-    postHTML += `<h3>"${posts[i].title}"</h3>`;
-    postHTML += `<span>"${date}"</span>`;
-    // audio posts have height set to auto
-    const height = posts[i].isText ? "1250px" : "auto";
-    postHTML += `<div class="row terminal">
-                          <div class="col-lg-12">
-                            <iframe class="blog_post" src="blog_posts/${posts[i].fname}" height="${height}"></iframe>
-                          </div>
-                     </div></div>`;
-    htmlString += postHTML;
-  }
+  let htmlString = "";
+  posts.forEach(post => {
+        // date of blog post
+        const date = post.getDate();
+        let postHTML = `<div id="bp${date}">`;
+        postHTML += `<h3>${post.title}</h3>`;
+        postHTML += `<span>${date}</span>`;
+        // audio posts have height set to auto
+        const height = post.isText ? "1250px" : "auto";
+        postHTML += `<div class="row terminal">
+                              <div class="col-lg-12">
+                                <iframe class="blog_post" src="blog_posts/${post.fname}" height="${height}"></iframe>
+                              </div>
+                         </div></div>`;
+        htmlString += postHTML;
+  });
   return htmlString;
 }
