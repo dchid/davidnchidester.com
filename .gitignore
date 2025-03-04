@@ -2,3 +2,6 @@
 /images*
 /3d_models*
 blog_posts/tea_talks*
+.terraform.lock.hcl
+/tf/.terraform/*
+*.tfvars
