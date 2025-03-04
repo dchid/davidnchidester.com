@@ -6,7 +6,7 @@
             "day": 2,
             "year": 2025,
             "fname": "Game_Preservation",
-            "text": true
+            "isText": true
         },
         {
             "title": "Why Jenkins isn't the right tool",
@@ -14,7 +14,7 @@
             "day": 27,
             "year": 2023,
             "fname": "Jenkins",
-            "text": true
+            "isText": true
         },
         {
             "title": "Host your own server: part 2",
@@ -22,15 +22,15 @@
             "day": 2,
             "year": 2022,
             "fname": "Personal_Server_2",
-            "text": true
+            "isText": true
         },
         {
             "title": "Arbitrary Precision Arithmetic",
             "month": 5,
-            "day": 17,
+            "day": 27,
             "year": 2021,
             "fname": "Arbitrary_Precision",
-            "text": true
+            "isText": true
         },
         {
             "title": "Tea Talk with former Intel and NeXT executive Susan Rockrise",
@@ -38,7 +38,7 @@
             "day": 13,
             "year": 2021,
             "fname": "Susan_Rockrise",
-            "text": false
+            "isText": false
         },
         {
             "title": "Host Your Own Server!",
@@ -46,7 +46,7 @@
             "day": 17,
             "year": 2021,
             "fname": "Personal_Server",
-            "text": true
+            "isText": true
         },
         {
             "title": "The power of arm unleashed!",
@@ -54,7 +54,7 @@
             "day": 15,
             "year": 2020,
             "fname": "arm_unleashed",
-            "text": true
+            "isText": true
         },
         {
             "title": "RISC vs CISC architecures?",
@@ -62,7 +62,7 @@
             "day": 30,
             "year": 2020,
             "fname": "RISC_vs_CISC",
-            "text": true
+            "isText": true
         },
         {
             "title": "What’s a tiling window manager and why might you use one?",
@@ -70,7 +70,7 @@
             "day": 2,
             "year": 2020,
             "fname": "tiling_wm",
-            "text": true
+            "isText": true
         }
     ]
 }
