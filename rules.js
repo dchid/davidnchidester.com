@@ -3,7 +3,7 @@
 */
 $(document).ready(function () {
     //fadin effect
-    $('div.hidden').fadeIn(1000).removeClass('hidden');
+    $("div.hidden").fadeIn(1000).removeClass("hidden");
     //Add the asthetic line to terminal sections
     const blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span><br><br>"
     $("div.start_terminal").append(blogStr);
@@ -22,7 +22,7 @@ $(document).ready(function () {
         $(".toggle_slide_target").slideToggle("fast");
     });
     //Activate first tab on load
-    $('.nav-tabs li:first-child a').tab('show');
+    $(".nav-tabs li:first-child a").tab("show");
     // buld html for card bodies
     $("#languageList").append(buildUnorderedList(["C and C++", "Python", "Java", "JavaScript and Typscript", "HTML and CSS", "SQL"]));
     $("#softwareList").append(buildUnorderedList(["linux", "AWS, Azure, GCP", "Docker", "Kubernetes", "Git, Github", "Terraform", "NodeJS"]));
@@ -63,8 +63,8 @@ function buildNavBarHTML(){
 
 //Hides element instead of display none
 jQuery.fn.visibilityToggle = function() {
-    return this.css('visibility', function(i, visibility) {
-        return (visibility == 'visible') ? 'hidden' : 'visible';
+    return this.css("visibility", function(i, visibility) {
+        return (visibility == "visible") ? "hidden" : "visible";
     });
 };
 
