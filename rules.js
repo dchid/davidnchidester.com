@@ -24,8 +24,8 @@ $(document).ready(function () {
     //Activate first tab on load
     $('.nav-tabs li:first-child a').tab('show');
     // buld html for card bodies
-    buildUnorderedList("languageList", ["C and C++", "Python", "Java", "JavaScript and Typscript", "HTML and CSS", "SQL"]);
-    buildUnorderedList("softwareList", ["linux", "AWS, Azure, GCP", "Docker", "Kubernetes", "Git, Github", "Terraform", "NodeJS"]);
+    $("#languageList").append(buildUnorderedList(["C and C++", "Python", "Java", "JavaScript and Typscript", "HTML and CSS", "SQL"]));
+    $("#softwareList").append(buildUnorderedList(["linux", "AWS, Azure, GCP", "Docker", "Kubernetes", "Git, Github", "Terraform", "NodeJS"]));
 });
 
 //function for controling adaptive nav bar
@@ -69,12 +69,12 @@ jQuery.fn.visibilityToggle = function() {
 };
 
 // Turns an array into an html unordered list
-function buildUnorderedList(parentId, arr) {
+function buildUnorderedList(arr) {
     let ul = document.createElement("ul");
     arr.forEach(element => {
         let li = document.createElement("li");
         li.innerText = element;
         ul.appendChild(li);
     });
-    $(`#${parentId}`).append(ul);
+    return ul;
 }
