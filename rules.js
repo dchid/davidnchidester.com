@@ -37,12 +37,11 @@ function adaptiveNavBar() {
 
 //Saving footer html here because it's on every page
 function buildFooterHTML(){
-    const mailToIcon = "<a href=\"mailto:davidchidester@protonmail.com\" target=\"blank\"><i class=\"fa fa-envelope\"></i></a>";
-    const linkedInIcon = "<a href=\"https://www.linkedin.com/in/david-chidester/\" target=\"blank\"><i class=\"fa fa-linkedin\"></i></a>";
-    const gitHubIcon = "<a href=\"https://github.com/dchid\" target=\"blank\"><i class=\"fa fa-github\"></i></a>";
-    const instagramIcon = "<a href=\"https://www.instagram.com/fude_dude/\" target=\"blank\"><i class=\"fa fa-instagram\"></i></a>";
-    const curr = new Date().getFullYear();
-    const copyright = "<p class=\"copyright\"><b>&#169; 2019-"+ curr + " David Chidester. All rights reserved.</b></p>";
+    const mailToIcon = '<a href="mailto:davidchidester@protonmail.com" target="blank"><i class="fa fa-envelope"></i></a>';
+    const linkedInIcon = '<a href="https://www.linkedin.com/in/david-chidester/" target="blank"><i class="fa fa-linkedin"></i></a>';
+    const gitHubIcon = '<a href="https://github.com/dchid" target="blank"><i class="fa fa-github"></i></a>';
+    const instagramIcon = '<a href="https://www.instagram.com/fude_dude/" target="blank"><i class="fa fa-instagram"></i></a>';
+    const copyright = `<p class="copyright"><b>&#169; 2019-${new Date().getFullYear()} David Chidester. All rights reserved.</b></p>`;
     return mailToIcon + linkedInIcon + gitHubIcon + instagramIcon + copyright;
 }
 
