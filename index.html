@@ -23,6 +23,14 @@
   <link rel="stylesheet" href="dchid.css">
 </head>
 
+<script>
+  $(document).ready(function () {
+    // buld html for card bodies
+    $("#languageList").append(buildUnorderedList(["C and C++", "Python", "Java", "JavaScript and Typscript", "HTML and CSS", "SQL"]));
+    $("#softwareList").append(buildUnorderedList(["linux", "AWS, Azure, GCP", "Docker", "Kubernetes", "Git, Github", "Terraform", "NodeJS"]));
+  });
+</script>
+
 <body>
   <nav class="topnav" id="myTopnav"></nav>
 
