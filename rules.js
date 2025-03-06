@@ -11,7 +11,7 @@ $(document).ready(function () {
     setInterval( ()=> {$(".blink").visibilityToggle();}, 600);
     //Building html string for footer icons
     const footerIconsHTML = buildFooterHTML();
-    $("div.footer_icons").append(footerIconsHTML);
+    $("footer").append(footerIconsHTML);
     const navBarHTML = buildNavBarHTML();
     $("#myTopnav").append(navBarHTML);
     $("#myTopnav").addClass("bg-dark");
@@ -37,12 +37,23 @@ function adaptiveNavBar() {
 
 //Saving footer html here because it's on every page
 function buildFooterHTML(){
-    const mailToIcon = '<a href="mailto:davidchidester@protonmail.com" target="blank"><i class="fa fa-envelope"></i></a>';
-    const linkedInIcon = '<a href="https://www.linkedin.com/in/david-chidester/" target="blank"><i class="fa fa-linkedin"></i></a>';
-    const gitHubIcon = '<a href="https://github.com/dchid" target="blank"><i class="fa fa-github"></i></a>';
-    const instagramIcon = '<a href="https://www.instagram.com/fude_dude/" target="blank"><i class="fa fa-instagram"></i></a>';
+    const mailToIcon = buildFooterIcon("mailto:davidchidester@protonmail.com", "envelope");
+    const linkedInIcon = buildFooterIcon("https://www.linkedin.com/in/david-chidester/", "linkedin");
+    const gitHubIcon = buildFooterIcon("https://github.com/dchid/", "github");
+    const instagramIcon = buildFooterIcon("https://www.instagram.com/fude_dude/", "instagram");
     const copyright = `<p class="copyright"><b>&#169; 2019-${new Date().getFullYear()} David Chidester. All rights reserved.</b></p>`;
-    return mailToIcon + linkedInIcon + gitHubIcon + instagramIcon + copyright;
+    return mailToIcon.outerHTML + linkedInIcon.outerHTML + gitHubIcon.outerHTML + instagramIcon.outerHTML + copyright;
+}
+
+function buildFooterIcon(link, iconClass) {
+    let a = document.createElement("a");
+    a.href = link;
+    a.target = "blank";
+    let i = document.createElement("i");
+    i.classList.add("fa");
+    i.classList.add(`fa-${iconClass}`);
+    a.appendChild(i);
+    return a;
 }
 
 //Saving nav bar html here because it's on every page
