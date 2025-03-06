@@ -23,7 +23,6 @@ $(document).ready(function () {
     });
     //Activate first tab on load
     $(".nav-tabs li:first-child a").tab("show");
-    
 });
 
 //function for controling adaptive nav bar
@@ -35,12 +34,20 @@ function adaptiveNavBar() {
 
 //Saving footer html here because it's on every page
 function buildFooterHTML(){
-    const mailToIcon = buildFooterIcon("mailto:davidchidester@protonmail.com", "envelope");
-    const linkedInIcon = buildFooterIcon("https://www.linkedin.com/in/david-chidester/", "linkedin");
-    const gitHubIcon = buildFooterIcon("https://github.com/dchid/", "github");
-    const instagramIcon = buildFooterIcon("https://www.instagram.com/fude_dude/", "instagram");
+    let htmlString = "";
+    const icons = [
+        {link: "mailto:davidchidester@protonmail.com", icon: "envelope"},
+        {link: "https://www.linkedin.com/in/david-chidester/", icon: "linkedin"},
+        {link: "https://github.com/dchid/", icon: "github"},
+        {link: "https://www.instagram.com/fude_dude/", icon: "instagram"},
+    ]
+    icons.forEach(element => {
+        const icon = buildFooterIcon(element.link, element.icon);
+        htmlString += icon.outerHTML;
+    });
     const copyright = `<p class="copyright"><b>&#169; 2019-${new Date().getFullYear()} David Chidester. All rights reserved.</b></p>`;
-    return mailToIcon.outerHTML + linkedInIcon.outerHTML + gitHubIcon.outerHTML + instagramIcon.outerHTML + copyright;
+    htmlString += copyright;
+    return htmlString;
 }
 
 function buildFooterIcon(link, iconClass) {
@@ -60,10 +67,10 @@ function buildNavBarHTML(){
     let htmlString = "";
     pages.forEach(page => {
         // homepage is index.html
-        const fileName = page === "Home" ? "index" : page.toLowerCase();
+        const fileName = page === "Home" ? "index.html" : `${page.toLowerCase()}.html`;
         // setting active page
         const active = $("#pageTitle").text() === page ? "bg-primary text-light" : "text-light";
-        htmlString += `<a class="${active}" href="${fileName}.html">${page}</a>`;
+        htmlString += `<a class="${active}" href="${fileName}">${page}</a>`;
     });
     htmlString += `<a href="javascript:void(0);" class="icon" onclick="adaptiveNavBar()"><i class="fa fa-bars"></i></a>`;
     return htmlString;
