@@ -3,7 +3,7 @@
 */
 $(document).ready(function () {
     //fadin effect
-    $('div.hidden').fadeIn(1000).removeClass('hidden');
+    $("div.hidden").fadeIn(1000).removeClass("hidden");
     //Add the asthetic line to terminal sections
     const blogStr = "<span>dchidester@blog:~ ./start_blog.sh <b style=\"font-weight: bolder;\" class=\"blink\">_</b></span><br><br>"
     $("div.start_terminal").append(blogStr);
@@ -11,7 +11,7 @@ $(document).ready(function () {
     setInterval( ()=> {$(".blink").visibilityToggle();}, 600);
     //Building html string for footer icons
     const footerIconsHTML = buildFooterHTML();
-    $("div.footer_icons").append(footerIconsHTML);
+    $("footer").append(footerIconsHTML);
     const navBarHTML = buildNavBarHTML();
     $("#myTopnav").append(navBarHTML);
     $("#myTopnav").addClass("bg-dark");
@@ -22,7 +22,7 @@ $(document).ready(function () {
         $(".toggle_slide_target").slideToggle("fast");
     });
     //Activate first tab on load
-    $('.nav-tabs li:first-child a').tab('show');
+    $(".nav-tabs li:first-child a").tab("show");
 });
 
 //function for controling adaptive nav bar
@@ -34,13 +34,31 @@ function adaptiveNavBar() {
 
 //Saving footer html here because it's on every page
 function buildFooterHTML(){
-    const mailToIcon = "<a href=\"mailto:davidchidester@protonmail.com\" target=\"blank\"><i class=\"fa fa-envelope\"></i></a>";
-    const linkedInIcon = "<a href=\"https://www.linkedin.com/in/david-chidester/\" target=\"blank\"><i class=\"fa fa-linkedin\"></i></a>";
-    const gitHubIcon = "<a href=\"https://github.com/dchid\" target=\"blank\"><i class=\"fa fa-github\"></i></a>";
-    const instagramIcon = "<a href=\"https://www.instagram.com/fude_dude/\" target=\"blank\"><i class=\"fa fa-instagram\"></i></a>";
-    const curr = new Date().getFullYear();
-    const copyright = "<p class=\"copyright\"><b>&#169; 2019-"+ curr + " David Chidester. All rights reserved.</b></p>";
-    return mailToIcon + linkedInIcon + gitHubIcon + instagramIcon + copyright;
+    let htmlString = "";
+    const icons = [
+        {link: "mailto:davidchidester@protonmail.com", icon: "envelope"},
+        {link: "https://www.linkedin.com/in/david-chidester/", icon: "linkedin"},
+        {link: "https://github.com/dchid/", icon: "github"},
+        {link: "https://www.instagram.com/fude_dude/", icon: "instagram"},
+    ]
+    icons.forEach(element => {
+        const icon = buildFooterIcon(element.link, element.icon);
+        htmlString += icon.outerHTML;
+    });
+    const copyright = `<p class="copyright"><b>&#169; 2019-${new Date().getFullYear()} David Chidester. All rights reserved.</b></p>`;
+    htmlString += copyright;
+    return htmlString;
+}
+
+function buildFooterIcon(link, iconClass) {
+    let a = document.createElement("a");
+    a.href = link;
+    a.target = "blank";
+    let i = document.createElement("i");
+    i.classList.add("fa");
+    i.classList.add(`fa-${iconClass}`);
+    a.appendChild(i);
+    return a;
 }
 
 //Saving nav bar html here because it's on every page
@@ -49,10 +67,10 @@ function buildNavBarHTML(){
     let htmlString = "";
     pages.forEach(page => {
         // homepage is index.html
-        const fileName = page === "Home" ? "index" : page.toLowerCase();
+        const fileName = page === "Home" ? "index.html" : `${page.toLowerCase()}.html`;
         // setting active page
         const active = $("#pageTitle").text() === page ? "bg-primary text-light" : "text-light";
-        htmlString += `<a class="${active}" href="${fileName}.html">${page}</a>`;
+        htmlString += `<a class="${active}" href="${fileName}">${page}</a>`;
     });
     htmlString += `<a href="javascript:void(0);" class="icon" onclick="adaptiveNavBar()"><i class="fa fa-bars"></i></a>`;
     return htmlString;
@@ -60,7 +78,18 @@ function buildNavBarHTML(){
 
 //Hides element instead of display none
 jQuery.fn.visibilityToggle = function() {
-    return this.css('visibility', function(i, visibility) {
-        return (visibility == 'visible') ? 'hidden' : 'visible';
+    return this.css("visibility", function(i, visibility) {
+        return (visibility == "visible") ? "hidden" : "visible";
     });
 };
+
+// Turns an array into an html unordered list
+function buildUnorderedList(arr) {
+    let ul = document.createElement("ul");
+    arr.forEach(element => {
+        let li = document.createElement("li");
+        li.innerText = element;
+        ul.appendChild(li);
+    });
+    return ul;
+}
