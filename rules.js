@@ -36,13 +36,14 @@ function adaptiveNavBar() {
 function buildFooterHTML(){
     let htmlString = "";
     const icons = [
-        {link: "mailto:davidchidester@protonmail.com", icon: "envelope"},
-        {link: "https://www.linkedin.com/in/david-chidester/", icon: "linkedin"},
-        {link: "https://github.com/dchid/", icon: "github"},
-        {link: "https://www.instagram.com/fude_dude/", icon: "instagram"},
+        {link: "mailto:davidchidester@protonmail.com", icon: "envelope", brand: false},
+        {link: "https://www.linkedin.com/in/david-chidester/", icon: "linkedin", brand: true},
+        {link: "https://github.com/dchid/", icon: "github", brand: true},
+        {link: "https://www.instagram.com/fude_dude/", icon: "instagram", brand: true},
+	{link: "https://metalgearpony.itch.io/", icon: "itch-io", brand: true}
     ]
     icons.forEach(element => {
-        const icon = buildFooterIcon(element.link, element.icon);
+        const icon = buildFooterIcon(element.link, element.icon, element.brand);
         htmlString += icon.outerHTML;
     });
     const copyright = `<p class="copyright"><b>&#169; 2019-${new Date().getFullYear()} David Chidester. All rights reserved.</b></p>`;
@@ -50,12 +51,13 @@ function buildFooterHTML(){
     return htmlString;
 }
 
-function buildFooterIcon(link, iconClass) {
+function buildFooterIcon(link, iconClass, isBrand) {
     let a = document.createElement("a");
     a.href = link;
     a.target = "blank";
     let i = document.createElement("i");
-    i.classList.add("fa");
+    const style = isBrand ? "fa-brands" : "fa-regular";
+    i.classList.add(style);
     i.classList.add(`fa-${iconClass}`);
     a.appendChild(i);
     return a;
