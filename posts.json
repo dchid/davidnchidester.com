@@ -1,5 +1,13 @@
 {
     "posts": [
+	{
+            "title": "DevOps Automation Using AI Generated Release Notes",
+            "month": 8,
+            "day": 5,
+            "year": 2025,
+            "fname": "AI_Release_Notes",
+            "isText": true
+        },
         {
             "title": "Preserving Gaming History With The PS-Placeable", 
             "month": 3,
