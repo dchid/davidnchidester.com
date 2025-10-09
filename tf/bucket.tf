@@ -1,15 +1,15 @@
 resource "aws_s3_bucket" "host_bucket" {
-  bucket = var.bucket_name
+  bucket = var.domain_name
 }
 
 # for logging
 resource "aws_s3_bucket" "log_bucket" {
-  bucket = "logs.${var.bucket_name}"
+  bucket = "logs.${var.domain_name}"
 }
 
 # For WWW subdomain
 resource "aws_s3_bucket" "www_bucket" {
-  bucket = "www.${var.bucket_name}"
+  bucket = "www.${var.domain_name}"
 }
 
 resource "aws_s3_bucket_logging" "bucket_logging" {

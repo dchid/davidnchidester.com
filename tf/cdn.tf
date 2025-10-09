@@ -1,7 +1,7 @@
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name = aws_s3_bucket.host_bucket.bucket_regional_domain_name
-    origin_id   = "S3-${var.bucket_name}" 
+    origin_id   = "S3-${var.domain_name}" 
 
     custom_origin_config {
       http_port              = 80
@@ -11,7 +11,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
-  aliases = [var.bucket_name]
+  aliases = [var.domain_name]
 
   enabled             = true
   is_ipv6_enabled     = true
@@ -20,7 +20,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = "S3-${var.bucket_name}"
+    target_origin_id = "S3-${var.domain_name}"
 
     forwarded_values {
       query_string = false
@@ -54,7 +54,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 resource "aws_cloudfront_distribution" "www_s3_distribution" {
   origin {
     domain_name = aws_s3_bucket.www_bucket.bucket_regional_domain_name
-    origin_id   = "S3-www.${var.bucket_name}"
+    origin_id   = "S3-www.${var.domain_name}"
     custom_origin_config {
       http_port              = 80
       https_port             = 443
@@ -71,7 +71,7 @@ resource "aws_cloudfront_distribution" "www_s3_distribution" {
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = "S3-www.${var.bucket_name}"
+    target_origin_id = "S3-www.${var.domain_name}"
 
     forwarded_values {
       query_string = true
