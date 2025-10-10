@@ -4,4 +4,5 @@
 blog_posts/tea_talks*
 .terraform.lock.hcl
 /tf/.terraform/*
-*.tfvars
+/tf/terraform.tfvars
+/tf/terraform.tfstate
