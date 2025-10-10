@@ -99,6 +99,13 @@ resource "aws_iam_role_policy" "codebuild_policy" {
           "logs:PutLogEvents"
         ],
         Resource = "*"
+      },
+      {
+        Effect = "Allow",
+        Action = [
+          "cloudfront:CreateInvalidation"
+        ],
+        Resource = "*"
       }
     ]
   })
@@ -140,8 +147,10 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Deploying static site to S3..."
+      - echo "Deploying static site to S3"
       - aws s3 sync src s3://${aws_s3_bucket.host_bucket.bucket} --delete --acl public-read
+      - Invalidating CloudFront Cache
+      - aws cloudfront create-invalidation --distribution-id ${aws_cloudfront_distribution.s3_distribution.id} --paths "/*"
 EOF
   }
 
