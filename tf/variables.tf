@@ -7,3 +7,9 @@ variable "region" {
 	type = string
 	description = "AWS region for hosting"
 }
+
+variable "github_user" {
+  description = "github username"
+  type        = string
+}
+
