@@ -148,7 +148,7 @@ phases:
   build:
     commands:
       - echo "Deploying static site to S3"
-      - aws s3 sync src s3://${aws_s3_bucket.host_bucket.bucket} --delete --acl public-read
+      - aws s3 sync src s3://${aws_s3_bucket.host_bucket.bucket} --acl public-read
       - Invalidating CloudFront Cache
       - aws cloudfront create-invalidation --distribution-id ${aws_cloudfront_distribution.s3_distribution.id} --paths "/*"
 EOF
