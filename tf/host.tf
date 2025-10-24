@@ -1,8 +1,10 @@
 resource "aws_amplify_app" "website" {
-  name       = "example"
-  repository = "https://github.com/davidnchidester.com/"
+  name       = var.domain_name
+  repository = "https://github.com/${var.github_user}/${var.domain_name}"
+  oauth_token                 = var.github_token 
+  platform                    = "WEB"
+  enable_auto_branch_creation = true
 
-  # The default build_spec added by the Amplify Console for React.
   build_spec = <<-EOT
     version: 2.0
     frontend:
@@ -18,11 +20,33 @@ resource "aws_amplify_app" "website" {
         paths: []
   EOT
 
-  # The default rewrites and redirects added by the Amplify Console.
   custom_rule {
     source = "/<*>"
     status = "404"
     target = "/index.html"
   }
-
 }
+
+resource "aws_amplify_branch" "main" {
+  app_id      = aws_amplify_app.website.id
+  branch_name = "main"
+}
+
+resource "aws_amplify_domain_association" "domain_association" {
+  app_id      = aws_amplify_app.website.id
+  domain_name = var.domain_name
+
+  # https://davidnchidester.com
+  sub_domain {
+    branch_name = aws_amplify_branch.main.branch_name
+    prefix      = ""
+  }
+
+  # www subdomain
+  sub_domain {
+    branch_name = aws_amplify_branch.main.branch_name
+    prefix      = "www"
+  }
+}
+
+

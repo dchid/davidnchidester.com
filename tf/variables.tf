@@ -9,7 +9,13 @@ variable "region" {
 }
 
 variable "github_user" {
-  description = "github username"
+  description = "GitHub username"
   type        = string
+}
+
+variable "github_token" {
+  description = "Github API token"
+  type        = string
+  sensitive   = true
 }
 
