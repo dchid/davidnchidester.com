@@ -23,7 +23,7 @@ resource "aws_amplify_app" "website" {
   custom_rule {
     source = "/<*>"
     status = "404"
-    target = "/index.html"
+    target = "/error.html"
   }
 }
 
