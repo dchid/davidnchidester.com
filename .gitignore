@@ -6,3 +6,4 @@ blog_posts/tea_talks*
 /tf/.terraform/*
 /tf/terraform.tfvars
 /tf/terraform.tfstate
+/tf/terraform.tfstate.backup
