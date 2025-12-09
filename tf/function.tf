@@ -60,7 +60,7 @@ resource "aws_lambda_function" "contact_form" {
 
   environment {
     variables = {
-      RECIPIENT_EMAIL = "your_email@example.com"
+      RECIPIENT_EMAIL = var.email
     }
   }
 
