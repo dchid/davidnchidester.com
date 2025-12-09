@@ -53,14 +53,14 @@ resource "aws_iam_role_policy" "lambda_policy" {
 resource "aws_lambda_function" "contact_form" {
   function_name = "contact_form_lambda"
   role          = aws_iam_role.lambda_role.arn
-  handler       = "lambda_function.lambda_handler"
+  handler       = "sendmail.lambda_handler"
   runtime       = "python3.12"
   filename      = "../scripts/function.zip"
   timeout       = 10
 
   environment {
     variables = {
-      RECIPIENT_EMAIL = "your_email@example.com"
+      RECIPIENT_EMAIL = var.email
     }
   }
 
@@ -79,3 +79,4 @@ resource "aws_lambda_permission" "api_gateway_invoke" {
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_apigatewayv2_api.contact_api.execution_arn}/*/*"
 }
+

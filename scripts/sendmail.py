@@ -46,7 +46,7 @@ def lambda_handler(event, context):
             Destination={"ToAddresses": [recipient]},
             Message={
                 "Subject": {"Data": fullSubject},
-                "Body": {"Text": {"Data": email_body}},
+                "Body": {"Text": {"Data": emailBody}},
             },
             ReplyToAddresses=[sender],
         )
