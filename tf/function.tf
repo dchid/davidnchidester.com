@@ -53,7 +53,7 @@ resource "aws_iam_role_policy" "lambda_policy" {
 resource "aws_lambda_function" "contact_form" {
   function_name = "contact_form_lambda"
   role          = aws_iam_role.lambda_role.arn
-  handler       = "lambda_function.lambda_handler"
+  handler       = "sendmail.lambda_handler"
   runtime       = "python3.12"
   filename      = "../scripts/function.zip"
   timeout       = 10
