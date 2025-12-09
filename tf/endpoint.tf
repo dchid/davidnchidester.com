@@ -1,4 +1,4 @@
-
+# Endpoint for making HTTP requests to the lambda function which handles email form data
 
 ##########################
 # API Gateway (HTTP API)
@@ -10,7 +10,7 @@ resource "aws_apigatewayv2_api" "contact_api" {
   cors_configuration {
     allow_headers = ["Content-Type"]
     allow_methods = ["POST", "OPTIONS"]
-    allow_origins = ["https://www.yourwebsite.com"]
+    allow_origins = ["https://davidnchidester.com"]
   }
 }
 
