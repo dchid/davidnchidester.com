@@ -42,7 +42,7 @@ def lambda_handler(event, context):
 
         # Send via SES
         response = ses.send_email(
-            Source=recipient,
+            Source="contact@davidnchidester.com",
             Destination={"ToAddresses": [recipient]},
             Message={
                 "Subject": {"Data": fullSubject},
