@@ -65,7 +65,7 @@ function buildFooterIcon(link, iconClass, isBrand) {
 
 //Saving nav bar html here because it's on every page
 function buildNavBarHTML(){
-    const pages = ["Home", "Resume", "Portfolio", "Blog"];
+    const pages = ["Home", "Resume", "Portfolio", "Blog", "Contact"];
     let htmlString = "";
     pages.forEach(page => {
         // homepage is index.html
