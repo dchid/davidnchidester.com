@@ -11,7 +11,12 @@ resource "aws_apigatewayv2_api" "contact_api" {
   cors_configuration {
     allow_headers = ["Content-Type"]
     allow_methods = ["POST", "OPTIONS"]
-    allow_origins = ["https://${var.domain_name}"]
+    allow_origins = [
+      # prod URL
+      "https://${var.domain_name}",
+      # dev URL
+      "https://dev.${aws_amplify_app.website.id}.amplifyapp.com"
+    ]
     expose_headers = []
     max_age        = 3600
   }
