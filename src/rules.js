@@ -36,7 +36,7 @@ function adaptiveNavBar() {
 function buildFooterHTML(){
     let htmlString = "";
     const icons = [
-        {link: "mailto:davidchidester@protonmail.com", icon: "envelope", brand: false},
+        {link: "contact.html", icon: "envelope", brand: false},
         {link: "https://www.linkedin.com/in/david-chidester/", icon: "linkedin", brand: true},
         {link: "https://github.com/dchid/", icon: "github", brand: true},
         {link: "https://www.instagram.com/fude_dude/", icon: "instagram", brand: true},
@@ -65,7 +65,7 @@ function buildFooterIcon(link, iconClass, isBrand) {
 
 //Saving nav bar html here because it's on every page
 function buildNavBarHTML(){
-    const pages = ["Home", "Resume", "Portfolio", "Blog"];
+    const pages = ["Home", "Resume", "Portfolio", "Blog", "Contact"];
     let htmlString = "";
     pages.forEach(page => {
         // homepage is index.html

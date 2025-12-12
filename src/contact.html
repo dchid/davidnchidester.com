@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- pageTitle id added to tell rules.js what page should be active in the navbar -->
+	<title id="pageTitle">Contact</title>
+	<meta lang="en" charset="UTF-8" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<!-- Font Awesome icons -->
+	<script src="https://kit.fontawesome.com/d9ec8edf8b.js" crossorigin="anonymous"></script>
+	<!-- Ensure proper mobile and desktop bootstrap rendering -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- Custum Javascript rules for this site -->
+	<script src="rules.js"></script>
+	<!-- Personal stylesheet -->
+	<link rel="stylesheet" href="dchid.css" />
+	<script src="contact.js"></script>
+</head>
+
+<body>
+	<nav class="topnav" id="myTopnav"></nav>
+
+	<div class="container hidden">
+		<div class="row">
+			<div class="col-lg-12">
+<p>
+	Interested in contacting me? I do contract work for a wide variety of work in IT and computing.
+	Here's a sample of some of the services that I provide.
+	<ul>
+		<li>Helping less technically knowlegable people organize their "digital life"</li>
+		<li>Software development including Building websites like this one</li>
+		<li>Building and repairing custom computers (including vintage computer repair)</li>
+		<li>Game console hardware and software modification</li>
+		<li>Computer science tutoring for students</li>
+		<li>Cyber security consulting and training</li>
+	</ul>
+	Fill out the form bellow, and I'll get back to you at my earliest convenience.
+</p>
+						
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<form id="contactForm" method="POST">
+					<div class="row form-group">
+						<div class="col-md-4" style="margin-bottom: 10px;">
+							<input id="name" class="form-control" type="text" name="name" placeholder="name" />
+						</div>
+						<div class="col-md-4" style="margin-bottom: 10px;">
+							<input id="email" class="form-control" type="email" name="sender" placeholder="email" />
+						</div>
+						<div class="col-md-4" style="margin-bottom: 10px;">
+							<input id="subject" class="form-control" type="text" name="subject" placeholder="subject" />
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col">
+							<textarea id="message" class="form-control" name="message" placeholder="message" rows="12"></textarea>
+						</div>
+					</div>
+					<input class="form-group btn btn-primary" type="submit" value="Submit" />
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<footer></footer>
+</body>
+
+</html>
