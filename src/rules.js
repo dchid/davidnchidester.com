@@ -15,6 +15,23 @@ $(document).ready(function () {
     const navBarHTML = buildNavBarHTML();
     $("#myTopnav").append(navBarHTML);
     $("#myTopnav").addClass("bg-dark");
+    // Fallback toggler: handle collapse toggle when Bootstrap JS isn't loaded
+    $("#myTopnav").on('click', '.navbar-toggler', function(e){
+        e.preventDefault();
+        const targetSel = $(this).attr('data-bs-target') || $(this).attr('data-target');
+        const $target = targetSel ? $(targetSel) : $(this).closest('.navbar').find('.navbar-collapse');
+        $target.toggleClass('show');
+        const expanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', (!expanded).toString());
+    });
+    // Auto-collapse navbar when a nav link is clicked (useful on mobile)
+    $("#myTopnav").on('click', '.navbar-nav .nav-link', function(){
+        const $collapse = $(this).closest('.navbar').find('.navbar-collapse');
+        if ($collapse.hasClass('show')){
+            $collapse.removeClass('show');
+            $collapse.closest('.navbar').find('.navbar-toggler').attr('aria-expanded','false');
+        }
+    });
     //add favicon
     $('<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">').appendTo("head");
     //to control toggling of slidable elements
