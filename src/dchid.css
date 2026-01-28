@@ -253,7 +253,7 @@ iframe.blog_post {
   width: 100%;
 }
 
-/* moved from portfolio.html: make tab links dark with white text by default, primary blue when active */
+/* make tab links dark with white text by default, primary blue when active */
 .nav-tabs .nav-link {
   background-color: #343a40; /* bg-dark */
   color: #fff;
