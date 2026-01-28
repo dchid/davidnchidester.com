@@ -44,31 +44,21 @@ $(document).ready(function () {
 
 // Footer is the same on every page
 function buildFooterHTML(){
+    let htmlString = "";
     const icons = [
-        {link: "contact.html", icon: "envelope", brand: false, title: "Contact"},
-        {link: "https://www.linkedin.com/in/david-chidester/", icon: "linkedin", brand: true, title: "LinkedIn"},
-        {link: "https://github.com/dchid/", icon: "github", brand: true, title: "GitHub"},
-        {link: "https://www.instagram.com/fude_dude/", icon: "instagram", brand: true, title: "Instagram"},
-        {link: "https://metalgearpony.itch.io/", icon: "itch-io", brand: true, title: "Itch.io"}
-    ];
-
-    let inner = "";
-    icons.forEach(el => {
-        const style = el.brand ? "fa-brands" : "fa-regular";
-        const target = el.link.startsWith("http") ? " target=\"_blank\" rel=\"noopener\"" : "";
-        inner += `<a class="text-light me-3" href="${el.link}"${target} aria-label="${el.title}"><i class="${style} fa-${el.icon} fa-lg"></i></a>`;
+        {link: "contact.html", icon: "envelope", brand: false},
+        {link: "https://www.linkedin.com/in/david-chidester/", icon: "linkedin", brand: true},
+        {link: "https://github.com/dchid/", icon: "github", brand: true},
+        {link: "https://www.instagram.com/fude_dude/", icon: "instagram", brand: true},
+	{link: "https://metalgearpony.itch.io/", icon: "itch-io", brand: true}
+    ]
+    icons.forEach(element => {
+        const icon = buildFooterIcon(element.link, element.icon, element.brand);
+        htmlString += icon.outerHTML;
     });
-
-    const copyright = `<p class="mb-0 copyright"><small class="text-light">&#169; 2019-${new Date().getFullYear()} David Chidester. All rights reserved.</small></p>`;
-
-    return `
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <div class="me-auto">${inner}</div>
-            </div>
-            <div class="mt-2">${copyright}</div>
-        </div>
-    `;
+    const copyright = `<p class="copyright"><b>&#169; 2019-${new Date().getFullYear()} David Chidester. All rights reserved.</b></p>`;
+    htmlString += copyright;
+    return htmlString;
 }
 
 function buildFooterIcon(link, iconClass, isBrand) {
@@ -83,34 +73,19 @@ function buildFooterIcon(link, iconClass, isBrand) {
     return a;
 }
 
-// Saving nav bar html here because it's on every page
+// Navigation bar is the same on every page
 function buildNavBarHTML(){
-    const pages = ["Resume", "Portfolio", "Blog", "Contact"];
-    const current = $("#pageTitle").text().trim();
-
-    let items = "";
+    const pages = ["Home", "Resume", "Portfolio", "Blog", "Contact"];
+    let htmlString = "";
     pages.forEach(page => {
-        // Homepage is index.html, all others are lowercase page name .html
-        const fileName = `${page.toLowerCase()}.html`;
-        const active = current === page ? " active" : "";
-        items += `<li class="nav-item"><a class="nav-link${active}" href="${fileName}">${page}</a></li>`;
+        // homepage is index.html
+        const fileName = page === "Home" ? "index.html" : `${page.toLowerCase()}.html`;
+        // setting active page
+        const active = $("#pageTitle").text() === page ? "bg-primary text-light" : "text-light";
+        htmlString += `<a class="${active}" href="${fileName}">${page}</a>`;
     });
-
-    return `
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="siteNavbar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        ${items}
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    `;
+    htmlString += `<a href="javascript:void(0);" class="icon" onclick="adaptiveNavBar()"><i class="fa fa-bars"></i></a>`;
+    return htmlString;
 }
 
 //Hides element instead of display none
