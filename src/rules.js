@@ -74,7 +74,7 @@ function buildNavBarHTML() {
         // homepage is index.html
         const fileName = page === "Home" ? "index.html" : `${page.toLowerCase()}.html`;
         // setting active page
-        const active = $("#pageTitle").text() === page ? "active" : "";
+        const active = $("#pageTitle").text() === page ? "active bg-primary" : "";
         htmlString += `<a class="nav-item nav-link ${active}" href="${fileName}">${page}</a>`;
     });
     htmlString += "</div></div>";
