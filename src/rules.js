@@ -13,8 +13,8 @@ $(document).ready(function () {
     const footerIconsHTML = buildFooterHTML();
     $("footer").append(footerIconsHTML);
     const navBarHTML = buildNavBarHTML();
-    $("#myTopnav").append(navBarHTML);
-    $("#myTopnav").addClass("bg-dark");
+    $("#topnav").append(navBarHTML);
+    $("#topnav").addClass("navbar navbar-expand-lg navbar-dark bg-dark");
     //add favicon
     $('<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">').appendTo("head");
     //to control toggling of slidable elements
@@ -64,17 +64,20 @@ function buildFooterIcon(link, iconClass, isBrand) {
 }
 
 //Saving nav bar html here because it's on every page
-function buildNavBarHTML(){
+function buildNavBarHTML() {
     const pages = ["Home", "Resume", "Portfolio", "Blog", "Contact"];
-    let htmlString = "";
+    // create button for adaptive navbar
+    let htmlString = `<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">`
+    htmlString += `<span class="navbar-toggler-icon"></span></button>`
+    htmlString += `<div class="collapse navbar-collapse" id="navbarNavAltMarkup"><div class="navbar-nav">`;
     pages.forEach(page => {
         // homepage is index.html
         const fileName = page === "Home" ? "index.html" : `${page.toLowerCase()}.html`;
         // setting active page
-        const active = $("#pageTitle").text() === page ? "bg-primary text-light" : "text-light";
-        htmlString += `<a class="${active}" href="${fileName}">${page}</a>`;
+        const active = $("#pageTitle").text() === page ? "active" : "";
+        htmlString += `<a class="nav-item nav-link ${active}" href="${fileName}">${page}</a>`;
     });
-    htmlString += `<a href="javascript:void(0);" class="icon" onclick="adaptiveNavBar()"><i class="fa fa-bars"></i></a>`;
+    htmlString += "</div></div>";
     return htmlString;
 }
 
