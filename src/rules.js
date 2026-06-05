@@ -40,7 +40,8 @@ function buildFooterHTML(){
         {link: "https://www.linkedin.com/in/david-chidester/", icon: "linkedin", brand: true},
         {link: "https://github.com/dchid/", icon: "github", brand: true},
         {link: "https://www.instagram.com/fude_dude/", icon: "instagram", brand: true},
-	{link: "https://metalgearpony.itch.io/", icon: "itch-io", brand: true}
+	{link: "https://metalgearpony.itch.io/", icon: "itch-io", brand: true},
+	{link: "https://pixelfed.social/sauce_boss", icon: "pixelfed", brand: true},
     ]
     icons.forEach(element => {
         const icon = buildFooterIcon(element.link, element.icon, element.brand);
