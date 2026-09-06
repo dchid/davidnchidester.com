@@ -1,0 +1,22 @@
+{
+  "name": "davidnchidester.com",
+  "version": "3.0.0",
+  "description": "The front end for David Chidester's personal website",
+  "homepage": "https://davidnchidester.com",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dchid/davidnchidester.com.git"
+  },
+  "license": "GPL-3.0",
+  "author": "David Tishkoff Chidester",
+  "type": "commonjs",
+  "main": "rules.js",
+  "scripts": {
+    "test": "xdg-open index.html"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.0",
+    "bootstrap": "^5.3.8",
+    "jquery": "^4.0.0"
+  }
+}

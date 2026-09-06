@@ -5,18 +5,14 @@
   <!-- pageTitle id added to tell rules.js what page should be active in the navbar -->
   <title id="pageTitle">Home</title>
   <meta lang="en" charset="UTF-8">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- Font Awesome icons -->
-  <script src="https://kit.fontawesome.com/d9ec8edf8b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"></link>
   <!-- Ensure proper mobile and desktop bootstrap rendering -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
   <!-- Custum Javascript rules for this site -->
   <script src="rules.js"></script>
   <!-- Personal stylesheet -->
@@ -31,10 +27,16 @@
   });
 </script>
 
+<style>
+    #bio {
+	margin-bottom: 20px;
+    }
+</style>
+
 <body>
   <nav id="topnav"></nav>
 
-  <div class="container hidden">
+  <div id="bio" class="container hidden">
     <div class="row bio">
       <div class="col-lg-3">
         <h2>David Tishkoff Chidester</h2>
@@ -64,12 +66,12 @@
             href="https://pixelfed.social/sauce_boss" , target="blank">PixelFed page</a>. In my free time I enjoy
           gaming, ultimate frisbee, and spending time with my dog, Shoko.
         </p>
-
       </div>
     </div>
   </div>
   <div class="container hidden">
-    <div class="card-deck">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
       <div class="card text-white bg-secondary">
         <div class="card-header">
           <h3>Language Competencies</h3>
@@ -77,6 +79,8 @@
         <div id="languageList" class="card-body">
         </div>
       </div>
+      </div>
+      <div class="col">
       <div class="card text-white bg-secondary">
         <div class="card-header">
           <h3>Software Competencies</h3>
@@ -84,6 +88,8 @@
         <div id="softwareList" class="card-body">
         </div>
       </div>
+      </div>
+      <div class="col">
       <div class="card text-white bg-secondary">
         <div class="card-header">
           <h3>Certifications</h3>
@@ -102,6 +108,7 @@
               alt="Linux Foundation Secure Software Development badge" width="47%" height=auto>
           </a>
         </div>
+      </div>
       </div>
     </div>
   </div>

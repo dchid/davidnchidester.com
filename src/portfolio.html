@@ -2,44 +2,44 @@
 <html lang="en">
 
 <head>
-    <!-- pageTitle id added to tell rules.js what page should be active in the navbar -->
-    <title id="pageTitle">Portfolio</title>
-    <meta lang="en" charset="UTF-8">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Font Awesome icons -->
-    <script src="https://kit.fontawesome.com/d9ec8edf8b.js" crossorigin="anonymous"></script>
-    <!-- Ensure proper mobile and desktop bootstrap rendering -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- Custum Javascript rules for this site -->
-    <script src="rules.js"></script>
-    <!-- Personal stylesheet -->
-    <link rel="stylesheet" href="dchid.css">
+  <!-- pageTitle id added to tell rules.js what page should be active in the navbar -->
+  <title id="pageTitle">Portfolio</title>
+  <meta lang="en" charset="UTF-8">
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"></link>
+  <!-- Ensure proper mobile and desktop bootstrap rendering -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery library -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+  <!-- Bootstrap JS bundle (includes Popper) - required for tabs to work -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custum Javascript rules for this site -->
+  <script src="rules.js"></script>
+  <!-- Personal stylesheet -->
+  <link rel="stylesheet" href="dchid.css">
 </head>
 
 <body>
     <nav id="topnav"></nav>
 
     <div class="container hidden">
-        <ul class="nav nav-tabs nav-justified navbar-dark bg-dark">
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#software_tab">Software Engineering</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#security_tab">Cyber Security</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#publications_tab">Publications</a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="software_tab" class="tab-pane bg-dark">
+        <nav>
+  	    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    		<button class="nav-link active" id="nav-software-tab" data-bs-toggle="tab" data-bs-target="#software_tab" type="button" role="tab" aria-controls="software_tab" aria-selected="true">Software Engineering</button>
+    		<button class="nav-link" id="nav-security-tab" data-bs-toggle="tab" data-bs-target="#security_tab" type="button" role="tab" aria-controls="security_tab" aria-selected="false">Cyber Security</button>
+    		<button class="nav-link" id="nav-publications-tab" data-bs-toggle="tab" data-bs-target="#publications_tab" type="button" role="tab" aria-controls="publications_tab" aria-selected="false">Publications</button>
+  	    </div>
+    	</nav>
+        <div id="nav-tabContent" class="tab-content" role="tabpanel" aria-labelledby="nav-software-tab" tabindex="0">
+            <div id="software_tab" class="tab-pane fade show active">
                 <br>
                 <h3 class="centered_text">Projects</h3>
                 <br>
                 <div class="container">
-                    <div class="card-columns">
-                        <div class="card bg-secondary">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4 class="centered_text">PyCracker</h4>
                             </div>
@@ -48,10 +48,10 @@
                                     PyCracker is a simple brute force password cracker I wrote to demonstrate how pen
                                     testing tools like John the Ripper work. Check it out on my Github! 
                                 </p>
-			        <a href="https://github.com/dchid/PyCracker" target="blank" class="btn btn-info centered" role="button">View Source</a>
+			        <a href="https://github.com/dchid/PyCracker" target="_blank" class="btn btn-info centered" role="button">View Source</a>
                             </div>
                         </div>
-                        <div class="card bg-secondary">
+                        <div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4 class="centered_text">Numeral Base Converter</h4>
                             </div>
@@ -65,10 +65,10 @@
                                     course at Willamette University, but I've modified it as a CLI application designed
                                     to be piped to other CLI apps. Check it out on my Github.
                                 </p>
-			    	<a href="https://github.com/dchid/Numeral-Base-Converter" target="blank" class="btn btn-info centered" role="button">View Source</a>
+			    	<a href="https://github.com/dchid/Numeral-Base-Converter" target="_blank" class="btn btn-info centered" role="button">View Source</a>
                             </div>
                         </div>
-                        <div class="card bg-secondary">
+                        <div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4 class="centered_text">Longest Common DNA Subsequence</h4>
                             </div>
@@ -79,10 +79,10 @@
                                     DNA sequences, find compliment bases, and convert DNA to Messenger RNA. I've found
                                     this project particularly interesting after I started working in biotech.
                                 </p>
-			    	<a href="https://github.com/dchid/Longest-Common-DNA-subsequence" target="blank" class="btn btn-info centered" role="button">View Source</a>
+			    	<a href="https://github.com/dchid/Longest-Common-DNA-subsequence" target="_blank" class="btn btn-info centered" role="button">View Source</a>
                             </div>
                         </div>
-                        <div class="card bg-secondary">
+                        <div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4 class="centered_text">Personal Website</h4>
                             </div>
@@ -94,10 +94,10 @@
 				    do freelance web development. You can email me using contact page if you want me to 
 				    build you a website like this one.
                                 </p>
-			    	<a href="https://github.com/dchid/davidnchidester.com" target="blank" class="btn btn-info centered" role="button">View Source</a>
+			    	<a href="https://github.com/dchid/davidnchidester.com" target="_blank" class="btn btn-info centered" role="button">View Source</a>
                             </div>
                         </div>
-			<div class="card bg-secondary">
+			<div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4 class="centered_text">Stopwatch</h4>
                             </div>
@@ -108,7 +108,7 @@
 				    the <span style="margin: 20px; color: orange;">sw</span> command, and feels right at
 				    home with standard posix utilities.
                                 </p>
-			    	<a href="https://github.com/dchid/stopwatch" target="blank" class="btn btn-info centered" role="button">View Source</a>
+			    	<a href="https://github.com/dchid/stopwatch" target="_blank" class="btn btn-info centered" role="button">View Source</a>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                 </div>
             </div>
 
-            <div id="security_tab" class="tab-pane bg-dark">
+            <div id="security_tab" class="tab-pane fade show" role="tabpanel" aria-labelledby="nav-security-tab" tabindex="0">
                 <h3 class="centered_text"><br>Cyber Security</h3><br>
                 <p>In Fall of 2018, I participated in the NCL (national cyber league) competition
                     and did my own independent study on penetration testing and ethical hacking. Listed below are my
@@ -150,12 +150,12 @@
                     </table>
                 </div>
             </div>
-            <div id="publications_tab" class="tab-pane bg-dark">
+            <div id="publications_tab" class="tab-pane fade show" role="tabpanel" aria-labelledby="nav-publications-tab" tabindex="0">
                 <br>
                 <h3 class=centered_text>Publications</h3>
                 <div class="container">
-                    <div class="card-columns">
-                        <div class="card bg-secondary">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4>Power Apps and AWS</h4>
                             </div>
@@ -166,14 +166,14 @@
                                     We created a resource provisioning request form with Microsoft PowerApps and
                                     published <a class="text-light"
                                         href="https://aws.amazon.com/blogs/modernizing-with-aws/thermo-fisher-integrated-microsoft-with-aws/"
-                                        target="blank">details of our work</a> on the AWS Blog.
+                                        target="_blank">details of our work</a> on the AWS Blog.
                                     We integrated the PowerApp with AWS API Gateway and AWS Lambda to create an
                                     automated self service platform.
                                 </p>
-				<a href="https://aws.amazon.com/blogs/modernizing-with-aws/thermo-fisher-integrated-microsoft-with-aws/" target="blank" class="btn btn-info centered" role="button">Read More</a>
+				<a href="https://aws.amazon.com/blogs/modernizing-with-aws/thermo-fisher-integrated-microsoft-with-aws/" target="_blank" class="btn btn-info centered" role="button">Read More</a>
                             </div>
                         </div>
-                        <div class="card bg-secondary">
+                        <div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4>Sharepoint to S3 Datalake</h4>
                             </div>
@@ -187,12 +187,12 @@
                                     co-authored a blog post on the project on the official AWS blog
                                     which you can view <a class="text-light"
                                         href="https://aws.amazon.com/blogs/modernizing-with-aws/how-thermo-fisher-scientific-enriches-aws-data-pipeline-by-pulling-business-data-from-microsoft-sharepoint/"
-                                        target="blank">here</a>.
+                                        target="_blank">here</a>.
                                 </p>
-				<a href="https://aws.amazon.com/blogs/modernizing-with-aws/how-thermo-fisher-scientific-enriches-aws-data-pipeline-by-pulling-business-data-from-microsoft-sharepoint/" target="blank" class="btn btn-info centered" role="button">Read More</a>
+				<a href="https://aws.amazon.com/blogs/modernizing-with-aws/how-thermo-fisher-scientific-enriches-aws-data-pipeline-by-pulling-business-data-from-microsoft-sharepoint/" target="_blank" class="btn btn-info centered" role="button">Read More</a>
                             </div>
                         </div>
-                        <div class="card bg-secondary">
+                        <div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4>Neurodiversity In The Workplace</h4>
                             </div>
@@ -201,14 +201,14 @@
                                     In 2019, I had the privilege of participating in the pilot for the
                                     <a class="text-light"
                                         href="https://www.sandiegouniontribune.com/communities/north-county/story/2019-08-19/carlsbad-firm-tests-hiring-program-for-workers-with-autism"
-                                        target="blank">Neurodiversity In The Workplace Program</a> at Thermo Fisher
+                                        target="_blank">Neurodiversity In The Workplace Program</a> at Thermo Fisher
                                     Scientific.
                                     The San Diego Tribune wrote an article about the program.
                                 </p>
-				<a href="https://www.sandiegouniontribune.com/communities/north-county/story/2019-08-19/carlsbad-firm-tests-hiring-program-for-workers-with-autism" target="blank" class="btn btn-info centered" role="button">Read More</a>
+				<a href="https://www.sandiegouniontribune.com/communities/north-county/story/2019-08-19/carlsbad-firm-tests-hiring-program-for-workers-with-autism" target="_blank" class="btn btn-info centered" role="button">Read More</a>
                             </div>
                         </div>
-			<div class="card bg-secondary">
+			<div class="card text-white bg-secondary">
                             <div class="card-header">
                                 <h4>The Good Men Project</h4>
                             </div>
@@ -216,7 +216,7 @@
                                 <p>
 				When starting as an undergrad student, I had the opportunity to write an article for The Good Men Project about the Equal Rights Amendment, feminism, and my own experience growing up in household with a stay at home father and working mother. The Goodman Project is a blog about masculinity and Men's interests.
                                 </p>
-				<a href="https://goodmenproject.com/featured-content/why-gender-equality-is-good-for-everyone-men-included-wcz/" target="blank" class="btn btn-info centered" role="button">Read More</a>
+				<a href="https://goodmenproject.com/featured-content/why-gender-equality-is-good-for-everyone-men-included-wcz/" target="_blank" class="btn btn-info centered" role="button">Read More</a>
                             </div>
                         </div>
 

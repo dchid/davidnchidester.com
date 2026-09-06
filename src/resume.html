@@ -2,25 +2,21 @@
 <html lang="en">
 
 <head>
-    <!-- pageTitle id added to tell rules.js what page should be active in the navbar -->
-    <title id="pageTitle">Resume</title>
-    <meta lang="en" charset="UTF-8">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Font Awesome icons -->
-    <script src="https://kit.fontawesome.com/d9ec8edf8b.js" crossorigin="anonymous"></script>
-    <!-- Ensure proper mobile and desktop bootstrap rendering -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- Custum Javascript rules for this site -->
-    <script src="rules.js"></script>
-    <!-- Personal stylesheet -->
-    <link rel="stylesheet" href="dchid.css">
+  <!-- pageTitle id added to tell rules.js what page should be active in the navbar -->
+  <title id="pageTitle">Resume</title>
+  <meta lang="en" charset="UTF-8">
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"></link>
+  <!-- Ensure proper mobile and desktop bootstrap rendering -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery library -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+  <!-- Custum Javascript rules for this site -->
+  <script src="rules.js"></script>
+  <!-- Personal stylesheet -->
+  <link rel="stylesheet" href="dchid.css">
 </head>
 
 <body>
@@ -30,7 +26,8 @@
     <div class="container hidden">
         <!-- Section for work experience -->
         <h2 class="centered_text">Work Experience</h2>
-        <div class="card-columns">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+	  <div class="col">
             <div class="card bg-secondary resume_entry">
 		    <div class="card-header">
 			<a href="https://www.linkedin.com/company/plungeai/" target="blank" class="resume_heading">Plunge AI</a>
@@ -48,7 +45,9 @@
 				<li>Documents best practices for git and creates branching strategy for continuous testing and integration</li>
 			</ul>
 		    </div>
+	      </div>
 	    </div>
+	  <div class="col">
             <div class="card bg-secondary resume_entry">
                 <div class="card-header">
                     <a href="https://stanford.edu" target="blank" class="resume_heading">Stanford University</a>
@@ -68,8 +67,10 @@
                         <li>Wrote unit tests to validate individual software components</li>
                     </ul>
                 </div>
+	      </div>
             </div>
 
+	  <div class="col">
             <div class="card bg-secondary resume_entry">
                 <div class="card-header">
                     <a href="http://thermofisher.com" target="blank" class="resume_heading">Thermo Fisher Scientific</a>
@@ -93,7 +94,9 @@
                         <li>Created visualizations and models using Python and Power BI</li>
                     </ul>
                 </div>
+	      </div>
             </div>
+	  <div class="col">
             <div class="card bg-secondary resume_entry">
                 <div class="card-header">
                     <a href="http://thermofisher.com" target="blank" class="resume_heading">Thermo Fisher Scientific</a>
@@ -122,7 +125,9 @@
                         <li>Automated migrations and formatting for big data</li>
                     </ul>
                 </div>
+	      </div>
             </div>
+	  <div class="col">
             <div class="card bg-secondary resume_entry">
                 <div class="card-header">
                     <a href="http://www.square2.com/" target="blank" class="resume_heading">Square 2 Design</a>
@@ -139,7 +144,9 @@
                         <li>Researched dynamic web solutions such as location-based HTTP redirects</li>
                     </ul>
                 </div>
+	      </div>
             </div>
+	  <div class="col">
             <div class="card bg-secondary resume_entry">
                 <div class="card-header">
                     <a href="http://jvs.org" target="blank" class="resume_heading">Jewish Vocational Services</a>
@@ -156,6 +163,7 @@
                         <li>Wrote documentation for future data collection and modeling process</li>
                     </ul>
                 </div>
+	      </div>
             </div>
         </div>
         <!-- Section for skills -->
