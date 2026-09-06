@@ -11,7 +11,8 @@ resource "aws_amplify_app" "website" {
       phases:
         build:
           commands:
-            - ""
+            - "cd src"
+            - "nmp install"
       artifacts:
         baseDirectory: /src
         files:
