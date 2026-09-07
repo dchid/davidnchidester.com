@@ -12,7 +12,8 @@
   "type": "commonjs",
   "main": "rules.js",
   "scripts": {
-    "test": "xdg-open index.html"
+    "test": "xdg-open index.html",
+    "build": "node build.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.0",
